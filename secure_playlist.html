@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Playlist Audio Sécurisée - Alain Ayenan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6f0fa;
+      margin: 0;
+      padding: 30px;
+    }
+    h2 {
+      text-align: center;
+      color: #003366;
+    }
+    .track-list {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .track {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .track-info {
+      flex-grow: 1;
+    }
+    .play-button {
+      background-color: #005bb5;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .play-button:hover {
+      background-color: #004090;
+    }
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<h2>🎧 Playlist – Alain Ayenan</h2>
+<div class="track-list">
+  <div class="track">
+    <div class="track-info"><strong>01. Akel – No Time</strong><br><em>Afrobeat | Enregistrement & Mixage & Mastering</em></div>
+    <button class="play-button" onclick="playAudio(0)">▶️ Lecture</button>
+  </div>
+  <div class="track">
+    <div class="track-info"><strong>02. Judith – Dans tes bras</strong><br><em>Zouk | Enregistrement & Mixage & Mastering</em></div>
+    <button class="play-button" onclick="playAudio(1)">▶️ Lecture</button>
+  </div>
+  <div class="track">
+    <div class="track-info"><strong>03. Judith – Je t’attendrai</strong><br><em>Zouk | Enregistrement & Mixage & Mastering</em></div>
+    <button class="play-button" onclick="playAudio(2)">▶️ Lecture</button>
+  </div>
+</div>
+
+<audio id="audio-player" controls style="display:none;"></audio>
+
+<script>
+  const audioFiles = [
+    "akel_no_time.mp3",
+    "judith_dans_tes_bras.mp3",
+    "judith_je_tattendrai.mp3"
+  ];
+
+  function playAudio(index) {
+    const audioPlayer = document.getElementById("audio-player");
+    audioPlayer.src = audioFiles[index];
+    audioPlayer.play();
+    audioPlayer.style.display = "block";
+  }
+
+  // Désactiver clic droit (anti-téléchargement basique)
+  document.addEventListener('contextmenu', event => event.preventDefault());
+</script>
+
+</body>
+</html>
