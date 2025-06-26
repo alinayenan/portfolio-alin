@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Galerie photos – Alain Ayenan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6f0fa;
+      padding: 30px;
+      margin: 0;
+    }
+    h2 {
+      text-align: center;
+      color: #003366;
+    }
+    .gallery-section {
+      margin-bottom: 50px;
+    }
+    .gallery-title {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #005bb5;
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+    }
+    .photo-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+<h2>📸 Galerie photos de Alain Ayenan</h2>
+
+<div class="gallery-section">
+  <div class="gallery-title">🎚️ Galerie Studio</div>
+  <div class="photo-grid">
+    <img src="photos/studio1.jpg" alt="Alain en studio 1">
+    <img src="photos/studio2.jpg" alt="Alain en studio 2">
+  </div>
+</div>
+
+<div class="gallery-section">
+  <div class="gallery-title">🎤 Galerie Live</div>
+  <div class="photo-grid">
+    <img src="photos/live1.jpg" alt="Alain en live 1">
+    <img src="photos/live2.jpg" alt="Alain en live 2">
+  </div>
+</div>
+
+<div class="gallery-section">
+  <div class="gallery-title">🌿 Galerie Collation cérémonie funèbre Papa</div>
+  <div class="photo-grid">
+    <img src="photos/funerailles1.jpg" alt="Funérailles 1">
+    <img src="photos/funerailles2.jpg" alt="Funérailles 2">
+  </div>
+</div>
+
+</body>
+</html>
