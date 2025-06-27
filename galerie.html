@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -14,14 +13,18 @@
     h2 {
       text-align: center;
       color: #003366;
+      font-size: 26px;
     }
     .gallery-section {
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
     .gallery-title {
       font-size: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       color: #005bb5;
+      text-align: left;
+      border-left: 6px solid #005bb5;
+      padding-left: 12px;
     }
     .photo-grid {
       display: grid;
@@ -33,6 +36,10 @@
       height: auto;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .photo-grid img:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -40,27 +47,38 @@
 
 <h2>📸 Galerie photos de Alain Ayenan</h2>
 
+<!-- Galerie Studio -->
 <div class="gallery-section">
   <div class="gallery-title">🎚️ Galerie Studio</div>
   <div class="photo-grid">
-    <img src="photos/studio1.jpg" alt="Alain en studio 1">
-    <img src="photos/studio2.jpg" alt="Alain en studio 2">
+    <!-- 59 photos studio -->
+    <!-- Tu peux coller jusqu’à studio59.jpg -->
+    <!-- Exemples : -->
+    <img src="photos/studio/studio1.jpg" alt="">
+    <img src="photos/studio/studio2.jpg" alt="">
+    <!-- ... jusqu’à studio59.jpg -->
   </div>
 </div>
 
+<!-- Galerie Live & Rencontre -->
 <div class="gallery-section">
-  <div class="gallery-title">🎤 Galerie Live</div>
+  <div class="gallery-title">🎤 Galerie Live & Rencontre</div>
   <div class="photo-grid">
-    <img src="photos/live1.jpg" alt="Alain en live 1">
-    <img src="photos/live2.jpg" alt="Alain en live 2">
+    <!-- 121 photos live -->
+    <img src="photos/live_rencontre/live1.jpg" alt="">
+    <img src="photos/live_rencontre/live2.jpg" alt="">
+    <!-- ... jusqu’à live121.jpg -->
   </div>
 </div>
 
+<!-- Galerie Funérailles -->
 <div class="gallery-section">
   <div class="gallery-title">🌿 Galerie Collation cérémonie funèbre Papa</div>
   <div class="photo-grid">
-    <img src="photos/funerailles1.jpg" alt="Funérailles 1">
-    <img src="photos/funerailles2.jpg" alt="Funérailles 2">
+    <!-- 59 photos funérailles -->
+    <img src="photos/funerailles/funerailles1.jpg" alt="">
+    <img src="photos/funerailles/funerailles2.jpg" alt="">
+    <!-- ... jusqu’à funerailles59.jpg -->
   </div>
 </div>
 
