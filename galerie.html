@@ -1,80 +1,11 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Galerie photos – Alain Ayenan</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #e6f0fa;
-      margin: 0;
-      padding: 30px;
-    }
-    h2 {
-      text-align: center;
-      color: #003366;
-      margin-bottom: 40px;
-    }
-    .gallery-section {
-      margin-bottom: 60px;
-    }
-    .gallery-title {
-      font-size: 22px;
-      margin-bottom: 10px;
-      color: #005bb5;
-    }
-    .photo-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 15px;
-    }
-    .photo-grid a {
-      display: block;
-    }
-    .photo-grid img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      cursor: pointer;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .photo-grid img:hover {
-      transform: scale(1.05);
-    }
-
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.8);
-      justify-content: center;
-      align-items: center;
-    }
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 10px;
-    }
-    .lightbox:target {
-      display: flex;
-    }
-  </style>
-</head>
-<body>
-
 <h2>📸 Galerie photos de Alain Ayenan</h2>
 
 <!-- Galerie Studio -->
 <div class="gallery-section">
   <div class="gallery-title">🎚️ Galerie Studio</div>
   <div class="photo-grid">
-    <!-- Exemple pour 3 images -->
-    <a href="#studio1"><img src="studio/studio1.jpg" alt="Studio 1"></a>
-    <a href="#studio2"><img src="studio/studio2.jpg" alt="Studio 2"></a>
-    <a href="#studio3"><img src="studio/studio3.jpg" alt="Studio 3"></a>
-    <!-- ... Tu ajoutes les autres ici -->
+    <!-- 59 images studio -->
+    <!-- COLLER ICI : galerie studio générée -->
   </div>
 </div>
 
@@ -82,36 +13,16 @@
 <div class="gallery-section">
   <div class="gallery-title">🎤 Galerie Live & Rencontre</div>
   <div class="photo-grid">
-    <a href="#live1"><img src="live/live1.jpg" alt="Live 1"></a>
-    <a href="#live2"><img src="live/live2.jpg" alt="Live 2"></a>
-    <a href="#live3"><img src="live/live3.jpg" alt="Live 3"></a>
-    <!-- ... etc -->
+    <!-- 121 images live -->
+    <!-- COLLER ICI : galerie live générée -->
   </div>
 </div>
 
-<!-- Galerie Funérailles -->
+<!-- Galerie Funérailles Papa -->
 <div class="gallery-section">
   <div class="gallery-title">🌿 Galerie Collation cérémonie funèbre Papa</div>
   <div class="photo-grid">
-    <a href="#fun1"><img src="funerailles/funerailles1.jpg" alt="Funérailles 1"></a>
-    <a href="#fun2"><img src="funerailles/funerailles2.jpg" alt="Funérailles 2"></a>
-    <a href="#fun3"><img src="funerailles/funerailles3.jpg" alt="Funérailles 3"></a>
-    <!-- ... etc -->
+    <!-- 59 images funérailles -->
+    <!-- COLLER ICI : galerie funerailles générée -->
   </div>
 </div>
-
-<!-- Lightbox preview -->
-<div id="studio1" class="lightbox"><a href="#"><img src="studio/studio1.jpg"></a></div>
-<div id="studio2" class="lightbox"><a href="#"><img src="studio/studio2.jpg"></a></div>
-<div id="studio3" class="lightbox"><a href="#"><img src="studio/studio3.jpg"></a></div>
-
-<div id="live1" class="lightbox"><a href="#"><img src="live/live1.jpg"></a></div>
-<div id="live2" class="lightbox"><a href="#"><img src="live/live2.jpg"></a></div>
-<div id="live3" class="lightbox"><a href="#"><img src="live/live3.jpg"></a></div>
-
-<div id="fun1" class="lightbox"><a href="#"><img src="funerailles/funerailles1.jpg"></a></div>
-<div id="fun2" class="lightbox"><a href="#"><img src="funerailles/funerailles2.jpg"></a></div>
-<div id="fun3" class="lightbox"><a href="#"><img src="funerailles/funerailles3.jpg"></a></div>
-
-</body>
-</html>
