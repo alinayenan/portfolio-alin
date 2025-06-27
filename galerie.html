@@ -1,1 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Galerie Studio – Alain Ayenan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6f0fa;
+      margin: 0;
+      padding: 30px;
+    }
+    h2 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 40px;
+    }
+    .gallery-section {
+      margin-bottom: 60px;
+    }
+    .gallery-title {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #005bb5;
+    }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+    }
+    .photo-grid a {
+      display: block;
+    }
+    .photo-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .photo-grid img:hover {
+      transform: scale(1.05);
+    }
 
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox:target {
+      display: flex;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>📸 Galerie Studio – Alain Ayenan</h2>
+
+<div class="gallery-section">
+  <div class="gallery-title">🎚️ Galerie Studio (5 premières photos)</div>
+  <div class="photo-grid">
+    <a href="#studio1"><img src="photos/studio/studio1.jpg" alt="Studio 1"></a>
+    <a href="#studio2"><img src="photos/studio/studio2.jpg" alt="Studio 2"></a>
+    <a href="#studio3"><img src="photos/studio/studio3.jpg" alt="Studio 3"></a>
+    <a href="#studio4"><img src="photos/studio/studio4.jpg" alt="Studio 4"></a>
+    <a href="#studio5"><img src="photos/studio/studio5.jpg" alt="Studio 5"></a>
+  </div>
+</div>
+
+<!-- Lightbox Preview -->
+<div id="studio1" class="lightbox"><a href="#"><img src="photos/studio/studio1.jpg" alt="Studio 1"></a></div>
+<div id="studio2" class="lightbox"><a href="#"><img src="photos/studio/studio2.jpg" alt="Studio 2"></a></div>
+<div id="studio3" class="lightbox"><a href="#"><img src="photos/studio/studio3.jpg" alt="Studio 3"></a></div>
+<div id="studio4" class="lightbox"><a href="#"><img src="photos/studio/studio4.jpg" alt="Studio 4"></a></div>
+<div id="studio5" class="lightbox"><a href="#"><img src="photos/studio/studio5.jpg" alt="Studio 5"></a></div>
+
+</body>
+  </html>
