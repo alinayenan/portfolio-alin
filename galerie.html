@@ -7,24 +7,21 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #e6f0fa;
-      padding: 30px;
       margin: 0;
+      padding: 30px;
     }
     h2 {
       text-align: center;
       color: #003366;
-      font-size: 26px;
+      margin-bottom: 40px;
     }
     .gallery-section {
       margin-bottom: 60px;
     }
     .gallery-title {
-      font-size: 20px;
-      margin-bottom: 15px;
+      font-size: 22px;
+      margin-bottom: 10px;
       color: #005bb5;
-      text-align: left;
-      border-left: 6px solid #005bb5;
-      padding-left: 12px;
     }
     .photo-grid {
       display: grid;
@@ -35,11 +32,31 @@
       width: 100%;
       height: auto;
       border-radius: 10px;
+      cursor: pointer;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s;
     }
     .photo-grid img:hover {
       transform: scale(1.05);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+    .lightbox:target {
+      display: flex;
     }
   </style>
 </head>
@@ -51,67 +68,12 @@
 <div class="gallery-section">
   <div class="gallery-title">🎚️ Galerie Studio</div>
   <div class="photo-grid">
-<img src="photos/studio/studio1.jpg" alt="Studio 1">
-<img src="photos/studio/studio2.jpg" alt="Studio 2">
-<img src="photos/studio/studio3.jpg" alt="Studio 3">
-<img src="photos/studio/studio4.jpg" alt="Studio 4">
-<img src="photos/studio/studio5.jpg" alt="Studio 5">
-<img src="photos/studio/studio6.jpg" alt="Studio 6">
-<img src="photos/studio/studio7.jpg" alt="Studio 7">
-<img src="photos/studio/studio8.jpg" alt="Studio 8">
-<img src="photos/studio/studio9.jpg" alt="Studio 9">
-<img src="photos/studio/studio10.jpg" alt="Studio 10">
-<img src="photos/studio/studio11.jpg" alt="Studio 11">
-<img src="photos/studio/studio12.jpg" alt="Studio 12">
-<img src="photos/studio/studio13.jpg" alt="Studio 13">
-<img src="photos/studio/studio14.jpg" alt="Studio 14">
-<img src="photos/studio/studio15.jpg" alt="Studio 15">
-<img src="photos/studio/studio16.jpg" alt="Studio 16">
-<img src="photos/studio/studio17.jpg" alt="Studio 17">
-<img src="photos/studio/studio18.jpg" alt="Studio 18">
-<img src="photos/studio/studio19.jpg" alt="Studio 19">
-<img src="photos/studio/studio20.jpg" alt="Studio 20">
-<img src="photos/studio/studio21.jpg" alt="Studio 21">
-<img src="photos/studio/studio22.jpg" alt="Studio 22">
-<img src="photos/studio/studio23.jpg" alt="Studio 23">
-<img src="photos/studio/studio24.jpg" alt="Studio 24">
-<img src="photos/studio/studio25.jpg" alt="Studio 25">
-<img src="photos/studio/studio26.jpg" alt="Studio 26">
-<img src="photos/studio/studio27.jpg" alt="Studio 27">
-<img src="photos/studio/studio28.jpg" alt="Studio 28">
-<img src="photos/studio/studio29.jpg" alt="Studio 29">
-<img src="photos/studio/studio30.jpg" alt="Studio 30">
-<img src="photos/studio/studio31.jpg" alt="Studio 31">
-<img src="photos/studio/studio32.jpg" alt="Studio 32">
-<img src="photos/studio/studio33.jpg" alt="Studio 33">
-<img src="photos/studio/studio34.jpg" alt="Studio 34">
-<img src="photos/studio/studio35.jpg" alt="Studio 35">
-<img src="photos/studio/studio36.jpg" alt="Studio 36">
-<img src="photos/studio/studio37.jpg" alt="Studio 37">
-<img src="photos/studio/studio38.jpg" alt="Studio 38">
-<img src="photos/studio/studio39.jpg" alt="Studio 39">
-<img src="photos/studio/studio40.jpg" alt="Studio 40">
-<img src="photos/studio/studio41.jpg" alt="Studio 41">
-<img src="photos/studio/studio42.jpg" alt="Studio 42">
-<img src="photos/studio/studio43.jpg" alt="Studio 43">
-<img src="photos/studio/studio44.jpg" alt="Studio 44">
-<img src="photos/studio/studio45.jpg" alt="Studio 45">
-<img src="photos/studio/studio46.jpg" alt="Studio 46">
-<img src="photos/studio/studio47.jpg" alt="Studio 47">
-<img src="photos/studio/studio48.jpg" alt="Studio 48">
-<img src="photos/studio/studio49.jpg" alt="Studio 49">
-<img src="photos/studio/studio50.jpg" alt="Studio 50">
-<img src="photos/studio/studio51.jpg" alt="Studio 51">
-<img src="photos/studio/studio52.jpg" alt="Studio 52">
-<img src="photos/studio/studio53.jpg" alt="Studio 53">
-<img src="photos/studio/studio54.jpg" alt="Studio 54">
-<img src="photos/studio/studio55.jpg" alt="Studio 55">
-<img src="photos/studio/studio56.jpg" alt="Studio 56">
-<img src="photos/studio/studio57.jpg" alt="Studio 57">
-<img src="photos/studio/studio58.jpg" alt="Studio 58">
-<img src="photos/studio/studio59.jpg" alt="Studio 59">
-
-    <!-- ▲ -->
+    <a href="#img1"><img src="studio/studio1.jpg" alt=""></a>
+    <a href="#img2"><img src="studio/studio2.jpg" alt=""></a>
+    <a href="#img3"><img src="studio/studio3.jpg" alt=""></a>
+    <a href="#img4"><img src="studio/studio4.jpg" alt=""></a>
+    <a href="#img5"><img src="studio/studio5.jpg" alt=""></a>
+    <!-- Ajoute plus d'images si besoin -->
   </div>
 </div>
 
@@ -119,129 +81,11 @@
 <div class="gallery-section">
   <div class="gallery-title">🎤 Galerie Live & Rencontre</div>
   <div class="photo-grid">
-    <!-- PHOTOS LIVE & RENCONTRE -->
-<img src="photos/live/live1.jpg" alt="Live 1">
-<img src="photos/live/live2.jpg" alt="Live 2">
-<img src="photos/live/live3.jpg" alt="Live 3">
-<img src="photos/live/live4.jpg" alt="Live 4">
-<img src="photos/live/live5.jpg" alt="Live 5">
-<img src="photos/live/live6.jpg" alt="Live 6">
-<img src="photos/live/live7.jpg" alt="Live 7">
-<img src="photos/live/live8.jpg" alt="Live 8">
-<img src="photos/live/live9.jpg" alt="Live 9">
-<img src="photos/live/live10.jpg" alt="Live 10">
-<img src="photos/live/live11.jpg" alt="Live 11">
-<img src="photos/live/live12.jpg" alt="Live 12">
-<img src="photos/live/live13.jpg" alt="Live 13">
-<img src="photos/live/live14.jpg" alt="Live 14">
-<img src="photos/live/live15.jpg" alt="Live 15">
-<img src="photos/live/live16.jpg" alt="Live 16">
-<img src="photos/live/live17.jpg" alt="Live 17">
-<img src="photos/live/live18.jpg" alt="Live 18">
-<img src="photos/live/live19.jpg" alt="Live 19">
-<img src="photos/live/live20.jpg" alt="Live 20">
-<img src="photos/live/live21.jpg" alt="Live 21">
-<img src="photos/live/live22.jpg" alt="Live 22">
-<img src="photos/live/live23.jpg" alt="Live 23">
-<img src="photos/live/live24.jpg" alt="Live 24">
-<img src="photos/live/live25.jpg" alt="Live 25">
-<img src="photos/live/live26.jpg" alt="Live 26">
-<img src="photos/live/live27.jpg" alt="Live 27">
-<img src="photos/live/live28.jpg" alt="Live 28">
-<img src="photos/live/live29.jpg" alt="Live 29">
-<img src="photos/live/live30.jpg" alt="Live 30">
-<img src="photos/live/live31.jpg" alt="Live 31">
-<img src="photos/live/live32.jpg" alt="Live 32">
-<img src="photos/live/live33.jpg" alt="Live 33">
-<img src="photos/live/live34.jpg" alt="Live 34">
-<img src="photos/live/live35.jpg" alt="Live 35">
-<img src="photos/live/live36.jpg" alt="Live 36">
-<img src="photos/live/live37.jpg" alt="Live 37">
-<img src="photos/live/live38.jpg" alt="Live 38">
-<img src="photos/live/live39.jpg" alt="Live 39">
-<img src="photos/live/live40.jpg" alt="Live 40">
-<img src="photos/live/live41.jpg" alt="Live 41">
-<img src="photos/live/live42.jpg" alt="Live 42">
-<img src="photos/live/live43.jpg" alt="Live 43">
-<img src="photos/live/live44.jpg" alt="Live 44">
-<img src="photos/live/live45.jpg" alt="Live 45">
-<img src="photos/live/live46.jpg" alt="Live 46">
-<img src="photos/live/live47.jpg" alt="Live 47">
-<img src="photos/live/live48.jpg" alt="Live 48">
-<img src="photos/live/live49.jpg" alt="Live 49">
-<img src="photos/live/live50.jpg" alt="Live 50">
-<img src="photos/live/live51.jpg" alt="Live 51">
-<img src="photos/live/live52.jpg" alt="Live 52">
-<img src="photos/live/live53.jpg" alt="Live 53">
-<img src="photos/live/live54.jpg" alt="Live 54">
-<img src="photos/live/live55.jpg" alt="Live 55">
-<img src="photos/live/live56.jpg" alt="Live 56">
-<img src="photos/live/live57.jpg" alt="Live 57">
-<img src="photos/live/live58.jpg" alt="Live 58">
-<img src="photos/live/live59.jpg" alt="Live 59">
-<img src="photos/live/live60.jpg" alt="Live 60">
-<img src="photos/live/live61.jpg" alt="Live 61">
-<img src="photos/live/live62.jpg" alt="Live 62">
-<img src="photos/live/live63.jpg" alt="Live 63">
-<img src="photos/live/live64.jpg" alt="Live 64">
-<img src="photos/live/live65.jpg" alt="Live 65">
-<img src="photos/live/live66.jpg" alt="Live 66">
-<img src="photos/live/live67.jpg" alt="Live 67">
-<img src="photos/live/live68.jpg" alt="Live 68">
-<img src="photos/live/live69.jpg" alt="Live 69">
-<img src="photos/live/live70.jpg" alt="Live 70">
-<img src="photos/live/live71.jpg" alt="Live 71">
-<img src="photos/live/live72.jpg" alt="Live 72">
-<img src="photos/live/live73.jpg" alt="Live 73">
-<img src="photos/live/live74.jpg" alt="Live 74">
-<img src="photos/live/live75.jpg" alt="Live 75">
-<img src="photos/live/live76.jpg" alt="Live 76">
-<img src="photos/live/live77.jpg" alt="Live 77">
-<img src="photos/live/live78.jpg" alt="Live 78">
-<img src="photos/live/live79.jpg" alt="Live 79">
-<img src="photos/live/live80.jpg" alt="Live 80">
-<img src="photos/live/live81.jpg" alt="Live 81">
-<img src="photos/live/live82.jpg" alt="Live 82">
-<img src="photos/live/live83.jpg" alt="Live 83">
-<img src="photos/live/live84.jpg" alt="Live 84">
-<img src="photos/live/live85.jpg" alt="Live 85">
-<img src="photos/live/live86.jpg" alt="Live 86">
-<img src="photos/live/live87.jpg" alt="Live 87">
-<img src="photos/live/live88.jpg" alt="Live 88">
-<img src="photos/live/live89.jpg" alt="Live 89">
-<img src="photos/live/live90.jpg" alt="Live 90">
-<img src="photos/live/live91.jpg" alt="Live 91">
-<img src="photos/live/live92.jpg" alt="Live 92">
-<img src="photos/live/live93.jpg" alt="Live 93">
-<img src="photos/live/live94.jpg" alt="Live 94">
-<img src="photos/live/live95.jpg" alt="Live 95">
-<img src="photos/live/live96.jpg" alt="Live 96">
-<img src="photos/live/live97.jpg" alt="Live 97">
-<img src="photos/live/live98.jpg" alt="Live 98">
-<img src="photos/live/live99.jpg" alt="Live 99">
-<img src="photos/live/live100.jpg" alt="Live 100">
-<img src="photos/live/live101.jpg" alt="Live 101">
-<img src="photos/live/live102.jpg" alt="Live 102">
-<img src="photos/live/live103.jpg" alt="Live 103">
-<img src="photos/live/live104.jpg" alt="Live 104">
-<img src="photos/live/live105.jpg" alt="Live 105">
-<img src="photos/live/live106.jpg" alt="Live 106">
-<img src="photos/live/live107.jpg" alt="Live 107">
-<img src="photos/live/live108.jpg" alt="Live 108">
-<img src="photos/live/live109.jpg" alt="Live 109">
-<img src="photos/live/live110.jpg" alt="Live 110">
-<img src="photos/live/live111.jpg" alt="Live 111">
-<img src="photos/live/live112.jpg" alt="Live 112">
-<img src="photos/live/live113.jpg" alt="Live 113">
-<img src="photos/live/live114.jpg" alt="Live 114">
-<img src="photos/live/live115.jpg" alt="Live 115">
-<img src="photos/live/live116.jpg" alt="Live 116">
-<img src="photos/live/live117.jpg" alt="Live 117">
-<img src="photos/live/live118.jpg" alt="Live 118">
-<img src="photos/live/live119.jpg" alt="Live 119">
-<img src="photos/live/live120.jpg" alt="Live 120">
-<img src="photos/live/live121.jpg" alt="Live 121">
-
+    <a href="#img6"><img src="live_rencontre/live_rencontre1.jpg" alt=""></a>
+    <a href="#img7"><img src="live_rencontre/live_rencontre2.jpg" alt=""></a>
+    <a href="#img8"><img src="live_rencontre/live_rencontre3.jpg" alt=""></a>
+    <a href="#img9"><img src="live_rencontre/live_rencontre4.jpg" alt=""></a>
+    <a href="#img10"><img src="live_rencontre/live_rencontre5.jpg" alt=""></a>
   </div>
 </div>
 
@@ -249,69 +93,32 @@
 <div class="gallery-section">
   <div class="gallery-title">🌿 Galerie Collation cérémonie funèbre Papa</div>
   <div class="photo-grid">
-    <!-- PHOTOS FUNÉRAILLES PAPA -->
-<img src="photos/funerailles/funerailles1.jpg" alt="Funérailles 1">
-<img src="photos/funerailles/funerailles2.jpg" alt="Funérailles 2">
-<img src="photos/funerailles/funerailles3.jpg" alt="Funérailles 3">
-<img src="photos/funerailles/funerailles4.jpg" alt="Funérailles 4">
-<img src="photos/funerailles/funerailles5.jpg" alt="Funérailles 5">
-<img src="photos/funerailles/funerailles6.jpg" alt="Funérailles 6">
-<img src="photos/funerailles/funerailles7.jpg" alt="Funérailles 7">
-<img src="photos/funerailles/funerailles8.jpg" alt="Funérailles 8">
-<img src="photos/funerailles/funerailles9.jpg" alt="Funérailles 9">
-<img src="photos/funerailles/funerailles10.jpg" alt="Funérailles 10">
-<img src="photos/funerailles/funerailles11.jpg" alt="Funérailles 11">
-<img src="photos/funerailles/funerailles12.jpg" alt="Funérailles 12">
-<img src="photos/funerailles/funerailles13.jpg" alt="Funérailles 13">
-<img src="photos/funerailles/funerailles14.jpg" alt="Funérailles 14">
-<img src="photos/funerailles/funerailles15.jpg" alt="Funérailles 15">
-<img src="photos/funerailles/funerailles16.jpg" alt="Funérailles 16">
-<img src="photos/funerailles/funerailles17.jpg" alt="Funérailles 17">
-<img src="photos/funerailles/funerailles18.jpg" alt="Funérailles 18">
-<img src="photos/funerailles/funerailles19.jpg" alt="Funérailles 19">
-<img src="photos/funerailles/funerailles20.jpg" alt="Funérailles 20">
-<img src="photos/funerailles/funerailles21.jpg" alt="Funérailles 21">
-<img src="photos/funerailles/funerailles22.jpg" alt="Funérailles 22">
-<img src="photos/funerailles/funerailles23.jpg" alt="Funérailles 23">
-<img src="photos/funerailles/funerailles24.jpg" alt="Funérailles 24">
-<img src="photos/funerailles/funerailles25.jpg" alt="Funérailles 25">
-<img src="photos/funerailles/funerailles26.jpg" alt="Funérailles 26">
-<img src="photos/funerailles/funerailles27.jpg" alt="Funérailles 27">
-<img src="photos/funerailles/funerailles28.jpg" alt="Funérailles 28">
-<img src="photos/funerailles/funerailles29.jpg" alt="Funérailles 29">
-<img src="photos/funerailles/funerailles30.jpg" alt="Funérailles 30">
-<img src="photos/funerailles/funerailles31.jpg" alt="Funérailles 31">
-<img src="photos/funerailles/funerailles32.jpg" alt="Funérailles 32">
-<img src="photos/funerailles/funerailles33.jpg" alt="Funérailles 33">
-<img src="photos/funerailles/funerailles34.jpg" alt="Funérailles 34">
-<img src="photos/funerailles/funerailles35.jpg" alt="Funérailles 35">
-<img src="photos/funerailles/funerailles36.jpg" alt="Funérailles 36">
-<img src="photos/funerailles/funerailles37.jpg" alt="Funérailles 37">
-<img src="photos/funerailles/funerailles38.jpg" alt="Funérailles 38">
-<img src="photos/funerailles/funerailles39.jpg" alt="Funérailles 39">
-<img src="photos/funerailles/funerailles40.jpg" alt="Funérailles 40">
-<img src="photos/funerailles/funerailles41.jpg" alt="Funérailles 41">
-<img src="photos/funerailles/funerailles42.jpg" alt="Funérailles 42">
-<img src="photos/funerailles/funerailles43.jpg" alt="Funérailles 43">
-<img src="photos/funerailles/funerailles44.jpg" alt="Funérailles 44">
-<img src="photos/funerailles/funerailles45.jpg" alt="Funérailles 45">
-<img src="photos/funerailles/funerailles46.jpg" alt="Funérailles 46">
-<img src="photos/funerailles/funerailles47.jpg" alt="Funérailles 47">
-<img src="photos/funerailles/funerailles48.jpg" alt="Funérailles 48">
-<img src="photos/funerailles/funerailles49.jpg" alt="Funérailles 49">
-<img src="photos/funerailles/funerailles50.jpg" alt="Funérailles 50">
-<img src="photos/funerailles/funerailles51.jpg" alt="Funérailles 51">
-<img src="photos/funerailles/funerailles52.jpg" alt="Funérailles 52">
-<img src="photos/funerailles/funerailles53.jpg" alt="Funérailles 53">
-<img src="photos/funerailles/funerailles54.jpg" alt="Funérailles 54">
-<img src="photos/funerailles/funerailles55.jpg" alt="Funérailles 55">
-<img src="photos/funerailles/funerailles56.jpg" alt="Funérailles 56">
-<img src="photos/funerailles/funerailles57.jpg" alt="Funérailles 57">
-<img src="photos/funerailles/funerailles58.jpg" alt="Funérailles 58">
-<img src="photos/funerailles/funerailles59.jpg" alt="Funérailles 59">
-
+    <a href="#img11"><img src="funerailles/funerailles1.jpg" alt=""></a>
+    <a href="#img12"><img src="funerailles/funerailles2.jpg" alt=""></a>
+    <a href="#img13"><img src="funerailles/funerailles3.jpg" alt=""></a>
+    <a href="#img14"><img src="funerailles/funerailles4.jpg" alt=""></a>
+    <a href="#img15"><img src="funerailles/funerailles5.jpg" alt=""></a>
   </div>
 </div>
+
+<!-- Lightbox preview (même image utilisée plusieurs fois pour l'exemple) -->
+<div id="img1" class="lightbox"><a href="#"><img src="studio/studio1.jpg"></a></div>
+<div id="img2" class="lightbox"><a href="#"><img src="studio/studio2.jpg"></a></div>
+<div id="img3" class="lightbox"><a href="#"><img src="studio/studio3.jpg"></a></div>
+<div id="img4" class="lightbox"><a href="#"><img src="studio/studio4.jpg"></a></div>
+<div id="img5" class="lightbox"><a href="#"><img src="studio/studio5.jpg"></a></div>
+
+<div id="img6" class="lightbox"><a href="#"><img src="live_rencontre/live_rencontre1.jpg"></a></div>
+<div id="img7" class="lightbox"><a href="#"><img src="live_rencontre/live_rencontre2.jpg"></a></div>
+<div id="img8" class="lightbox"><a href="#"><img src="live_rencontre/live_rencontre3.jpg"></a></div>
+<div id="img9" class="lightbox"><a href="#"><img src="live_rencontre/live_rencontre4.jpg"></a></div>
+<div id="img10" class="lightbox"><a href="#"><img src="live_rencontre/live_rencontre5.jpg"></a></div>
+
+<div id="img11" class="lightbox"><a href="#"><img src="funerailles/funerailles1.jpg"></a></div>
+<div id="img12" class="lightbox"><a href="#"><img src="funerailles/funerailles2.jpg"></a></div>
+<div id="img13" class="lightbox"><a href="#"><img src="funerailles/funerailles3.jpg"></a></div>
+<div id="img14" class="lightbox"><a href="#"><img src="funerailles/funerailles4.jpg"></a></div>
+<div id="img15" class="lightbox"><a href="#"><img src="funerailles/funerailles5.jpg"></a></div>
 
 </body>
 </html>
