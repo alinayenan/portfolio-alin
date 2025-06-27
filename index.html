@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Alain Ayenan – Ingénieur du Son</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -12,6 +11,14 @@
       margin: 0;
       padding: 0;
       color: #222;
+    }
+    .welcome-banner {
+      background-color: #cce6ff;
+      text-align: center;
+      padding: 12px 0;
+      font-size: 18px;
+      font-weight: bold;
+      color: #003366;
     }
     .header {
       display: flex;
@@ -66,7 +73,6 @@
     li {
       margin-bottom: 5px;
     }
-
     .content-flex {
       display: flex;
       justify-content: space-between;
@@ -76,10 +82,9 @@
     .left-col {
       width: calc(100% - 340px);
     }
-
     .box {
       width: 180px;
-      height: 100px;
+      height: 120px;
       border-radius: 16px;
       box-shadow: 0 6px 16px rgba(0,0,0,0.2);
       padding: 20px;
@@ -106,7 +111,6 @@
     .explanation {
       font-size: 14px;
     }
-
     .contact {
       background-color: #f0f8ff;
       padding: 20px;
@@ -120,9 +124,29 @@
       font-size: 14px;
       color: #888;
     }
+    #topBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #0066cc;
+      color: white;
+      cursor: pointer;
+      padding: 12px;
+      border-radius: 10px;
+    }
+    #topBtn:hover {
+      background-color: #003366;
+    }
   </style>
 </head>
 <body>
+
+<div class="welcome-banner">Bienvenue dans l'univers de Alain</div>
 
 <div class="header">
   <img src="portrait1.jpg" alt="Alain Ayenan 1">
@@ -136,7 +160,7 @@
 
 <div class="section">
   <h2>Introduction / Présentation</h2>
-  <p>Professionnel du son avec plus de 15 ans d'expérience dans le mixage, le mastering, le traitement audio et la sonorisation live en direct.</p>
+  <p>Professionnel du son avec plus de 13 ans d'expérience dans le mixage, le mastering, le traitement audio et la sonorisation live en direct.</p>
 
   <h2>Skills / Compétences</h2>
   <ul>
@@ -165,7 +189,7 @@
     </div>
     <div class="box audio-box">
       <a href="styles_audio.html">🎼 Audio Styles / Listen</a>
-      <div class="explanation">Écoute les styles du son musical travaillé par Alain</div>
+      <div class="explanation">Écoute les styles du son musical travaillé par Alain Ayenan</div>
     </div>
   </div>
 
@@ -177,26 +201,25 @@
     <li>🎤 Concert Cœur à Cœur – Sessime, Nikanort</li>
   </ul>
 
- <h2>Portfolio / Portfolio</h2>
-<div class="content-flex">
-  <div class="left-col">
-    <ul>
-      <li><a href="https://youtu.be/1vK5WYijmLE?si=5aXQ49Rm7onXRuTf" target="_blank">🎧 Audio – Okpê (Ayodélé)</a></li>
-      <li><a href="https://youtu.be/xXAH_J2qljI?si=W44LU3VOliBGLk9T" target="_blank">🎬 Clip – Hongan (Don Metok)</a></li>
-      <li><a href="https://youtu.be/3rwLe9ujURU?si=cnGPa5lACpe1K0w6" target="_blank">🎬 Clip – Enfant (Roselyne OLORY)</a></li>
-      <li><a href="https://youtu.be/7yYAzxOoye0?si=Rdhv6mUvYb8WBZFv" target="_blank">🎬 Clip – Nam'ablo (Almok)</a></li>
-      <li><a href="https://youtu.be/niN0h-AcpnQ?si=QacUton17mGiqoRn" target="_blank">🎬 Clip – Ahelou (Roselyne OLORY)</a></li>
-      <li><a href="https://www.facebook.com/share/v/18FQZL3Vec/" target="_blank">🎥 Reportage – ORTB (Hommage Boncana Maiga)</a></li>
-      <li><a href="https://www.facebook.com/share/p/19RffViWCt/" target="_blank">🎤 Prestation – Bonbon Vodou</a></li>
-      <li><a href="https://www.facebook.com/share/v/17ckxy5MSZ/" target="_blank">🎤 Prestation – Erol Josué</a></li>
-      <li><a href="https://www.facebook.com/share/v/15YnUrgfQ6/" target="_blank">🎤 Prestation – Koudy Fagbemi</a></li>
-    </ul>
-  </div>
-  <div class="box gallery-box">
-    <a href="galerie.html">📷 Photo Gallery</a>
-    <div class="explanation">Galerie photos de Alain</div>
+  <h2>Portfolio / Portfolio</h2>
+  <div class="content-flex">
+    <div class="left-col">
+      <ul>
+        <li><a href="#">Audio – Okpê (Ayodélé)</a></li>
+        <li><a href="#">Clip – Hongan (Don Metok)</a></li>
+        <li><a href="#">Clip – Enfant (Roselyne OLORY)</a></li>
+        <li><a href="#">Clip – Nam'ablo (Almok)</a></li>
+        <li><a href="#">Clip – Ahelou (Roselyne OLORY)</a></li>
+      </ul>
+    </div>
+    <div class="box gallery-box">
+      <a href="galerie.html">📷 Photo Gallery</a>
+      <div class="explanation">Galerie photos de Alain Ayenan</div>
+    </div>
   </div>
 </div>
+
+<button onclick="topFunction()" id="topBtn" title="Retour en haut">⬆️</button>
 
 <div class="contact">
   📧 Email : mixageproaudio@gmail.com<br />
@@ -206,5 +229,20 @@
 <footer>
   © 2025 Alain Ayenan – Tous droits réservés
 </footer>
+
+<script>
+  let topBtn = document.getElementById("topBtn");
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  };
+  function topFunction() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
 </body>
 </html>
