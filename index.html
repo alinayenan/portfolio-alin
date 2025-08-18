@@ -232,6 +232,21 @@
     #topBtn:hover {
       background: linear-gradient(to right, #004080, #00264d);
     }
+/* Effet survol pour les encadrés audio et galerie */
+.audio-box:hover, .gallery-box:hover {
+  transform: scale(1.15) rotate(-1deg); /* Agrandissement et légère rotation */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35); /* Ombre plus prononcée */
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+/* Changement subtil de couleur de fond au survol */
+.audio-box:hover {
+  background: linear-gradient(to bottom, #2b81c6, #0f3d73);
+}
+
+.gallery-box:hover {
+  background: linear-gradient(to bottom, #ffd699, #ffb84d);
+}
 
     /* ----------------------- Responsive ----------------------- */
     @media (max-width: 600px) {
