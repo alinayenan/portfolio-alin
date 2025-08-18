@@ -20,19 +20,20 @@
     /* ----------------------- Base ----------------------- */
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #e6f0fa;
+      background: linear-gradient(to bottom, #e6f0fa, #f0f8ff);
       margin: 0;
       padding: 0;
       color: #222;
     }
 
     .welcome-banner {
-      background-color: #cce6ff;
+      background: linear-gradient(to right, #4aa3df, #1f618d);
       text-align: center;
       padding: 20px 0;
       font-size: 22px;
       font-weight: bold;
-      color: #003366;
+      color: #fff;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     }
 
     .header {
@@ -40,16 +41,21 @@
       align-items: center;
       justify-content: space-between;
       padding: 20px 50px;
-      background-color: #e6f0fa;
+      background: linear-gradient(to right, #e6f0fa, #d0e7ff);
       border-bottom: 4px solid #0066cc;
     }
 
     .header img {
       width: 140px;
       height: 140px;
-      border-radius: 10px;
+      border-radius: 12px;
       object-fit: cover;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .header img:hover {
+      transform: scale(1.05);
     }
 
     .center-title {
@@ -58,11 +64,11 @@
     }
 
     .title {
-      font-size: 36px;
+      font-size: 38px;
       font-weight: bold;
       color: #004080;
       margin-bottom: 10px;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     }
 
     .subtitle {
@@ -72,24 +78,34 @@
     }
 
     .btn-contact {
-      margin-top: 10px;
-      background-color: #0066cc;
+      margin-top: 12px;
+      background: linear-gradient(to right, #0066cc, #004080);
       color: white;
-      padding: 10px 18px;
-      border-radius: 6px;
+      padding: 12px 20px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
       display: inline-block;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: all 0.3s;
+    }
+
+    .btn-contact:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to right, #004080, #00264d);
     }
 
     .section {
-      padding: 30px 60px;
+      padding: 40px 60px;
+      animation: fadeInUp 0.8s ease forwards;
     }
 
     h2 {
       color: #0066cc;
-      border-bottom: 2px solid #0066cc;
-      padding-bottom: 5px;
+      border-bottom: 3px solid #0066cc;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      font-size: 26px;
     }
 
     ul {
@@ -97,7 +113,8 @@
     }
 
     li {
-      margin-bottom: 5px;
+      margin-bottom: 10px;
+      font-size: 18px;
     }
 
     .content-flex {
@@ -111,28 +128,27 @@
       width: calc(100% - 340px);
     }
 
-    /* ----------------------- Encadrés ----------------------- */
+    /* ----------------------- Encadrés Modernes ----------------------- */
     .box {
       width: 220px;
       height: 150px;
-      border-radius: 16px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+      border-radius: 18px;
       padding: 25px;
       text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: center;
-
-      /* transition pour hover et effet apparition */
-      transition: all 0.3s ease;
+      background: linear-gradient(145deg, #ffffff, #f0f8ff);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transition: all 0.4s ease;
       opacity: 0;
       transform: translateY(20px);
-      animation: fadeInUp 0.6s forwards;
+      animation: fadeInUp 0.8s forwards;
     }
 
     .box:hover {
-      transform: translateY(-5px) scale(1.05);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+      transform: translateY(-5px) scale(1.07);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
     }
 
     @keyframes fadeInUp {
@@ -146,41 +162,50 @@
       font-weight: bold;
       font-size: 28px;
       text-decoration: none;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .explanation {
       font-size: 16px;
+      color: #333;
     }
 
     /* Couleurs spécifiques */
     .audio-box {
-      background-color: #4aa3df;
-      border: 2px solid #1f618d;
+      background: linear-gradient(to bottom, #4aa3df, #1f618d);
+      border: 2px solid #003366;
+      color: #fff;
+    }
+
+    .audio-box a {
+      color: #fff;
     }
 
     .gallery-box {
-      background-color: #fff3e0;
+      background: linear-gradient(to bottom, #fff3e0, #ffd699);
+      border: 2px solid #e65100;
     }
 
-    .audio-box a { color: #0033cc; }
-    .gallery-box a { color: #e65100; }
+    .gallery-box a {
+      color: #e65100;
+      font-weight: bold;
+    }
 
     /* ----------------------- Contact / Footer ----------------------- */
     .contact {
-      background-color: #e6f4ff;
+      background: linear-gradient(to right, #e6f4ff, #cce6ff);
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      padding: 25px;
-      margin-bottom: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 30px;
+      margin-bottom: 25px;
       text-align: center;
-      font-size: 16px;
+      font-size: 17px;
     }
 
     footer {
-      background-color: #f0f4ff;
+      background: linear-gradient(to right, #f0f4ff, #d0e7ff);
       text-align: center;
-      padding: 20px;
+      padding: 25px;
       font-size: 15px;
       color: #555;
       border-top: 3px solid #0066cc;
@@ -196,15 +221,16 @@
       font-size: 18px;
       border: none;
       outline: none;
-      background-color: #0066cc;
+      background: linear-gradient(to right, #0066cc, #004080);
       color: white;
       cursor: pointer;
       padding: 12px;
-      border-radius: 10px;
+      border-radius: 12px;
+      transition: all 0.3s;
     }
 
     #topBtn:hover {
-      background-color: #003366;
+      background: linear-gradient(to right, #004080, #00264d);
     }
 
     /* ----------------------- Responsive ----------------------- */
