@@ -2,19 +2,20 @@
 <html lang="fr">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F0RNN2HZN4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F0RNN2HZN4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F0RNN2HZN4');
+  </script>
 
-  gtag('config', 'G-F0RNN2HZN4');
-</script>
   <meta charset="UTF-8" />
   <meta name="google-site-verification" content="ViiR0gJs2rkzMAN_yDenRGR3VnP2Uxl1VnnQU0Hc3ow" />
-  <meta name="description" content="Alain Ayenan, ingénieur du son ProffessionnelIngénieur du son Proffessionnel Expérimenté en prise de son et postproduction audio." />
+  <meta name="description" content="Alain Ayenan, ingénieur du son Professionnel expérimenté en prise de son et postproduction audio." />
   <title>Alain Ayenan – Ingénieur du Son</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
     body {
       font-family: 'Roboto', sans-serif;
@@ -23,6 +24,7 @@
       padding: 0;
       color: #222;
     }
+
     .welcome-banner {
       background-color: #cce6ff;
       text-align: center;
@@ -31,6 +33,7 @@
       font-weight: bold;
       color: #003366;
     }
+
     .header {
       display: flex;
       align-items: center;
@@ -39,6 +42,7 @@
       background-color: #e6f0fa;
       border-bottom: 4px solid #0066cc;
     }
+
     .header img {
       width: 140px;
       height: 140px;
@@ -46,20 +50,24 @@
       object-fit: cover;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
+
     .center-title {
       text-align: center;
       flex: 1;
     }
+
     .title {
       font-size: 32px;
       font-weight: bold;
       color: #0066cc;
       margin-bottom: 10px;
     }
+
     .subtitle {
       font-size: 20px;
       color: #444;
     }
+
     .btn-contact {
       margin-top: 10px;
       background-color: #0066cc;
@@ -70,82 +78,101 @@
       font-weight: bold;
       display: inline-block;
     }
+
     .section {
       padding: 30px 60px;
     }
+
     h2 {
       color: #0066cc;
       border-bottom: 2px solid #0066cc;
       padding-bottom: 5px;
     }
+
     ul {
       padding-left: 20px;
     }
+
     li {
       margin-bottom: 5px;
     }
+
     .content-flex {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       flex-wrap: wrap;
     }
+
     .left-col {
       width: calc(100% - 340px);
     }
+
+    /* Encadrés */
     .box {
-  width: 220px;     /* + large */
-  height: 150px;    /* + haut */
-  border-radius: 16px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-  padding: 25px;    /* + d’espace intérieur */
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.box a {
-  font-weight: bold;
-  font-size: 28px;   /* plus grand qu’avant */
-  text-decoration: none;
-  margin-bottom: 14px;
-}
-.explanation {
-  font-size: 16px;  /* texte plus grand */
-}
-}
+      width: 220px;
+      height: 150px;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+      padding: 25px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    /* Audio Styles */
     .audio-box {
-      background-color: #4aa3df;
+      background-color: #2b6cb0; /* bleu foncé */
       border: 2px solid #1f618d;
       border-radius: 8px;
-}
+    }
+
+    .audio-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    /* Galerie Photos */
     .gallery-box {
-      background-color: #fff3e0;
-}
+      background-color: #fff3e0 !important;
+    }
+
+    /* Texte cliquable */
     .box a {
       font-weight: bold;
-      font-size: 18px;
+      font-size: 28px;
       text-decoration: none;
-      margin-bottom: 12px;
-}
-    .audio-box a { color: #0033cc; }
+      margin-bottom: 14px;
+    }
+
+    .audio-box a { color: #ffffff; } /* texte blanc pour contraste */
     .gallery-box a { color: #e65100; }
+
+    /* Texte descriptif */
     .explanation {
-      font-size: 14px;
-}
+      font-size: 16px;
+      color: #222;
+    }
+
+    /* Contact et Footer */
     .contact {
       background-color: #f0f8ff;
       padding: 20px;
       text-align: center;
       border-top: 2px solid #0066cc;
       font-size: 16px;
-  }
+    }
+
     footer {
       text-align: center;
       padding: 10px;
       font-size: 14px;
       color: #888;
-  }
+    }
+
+    /* Bouton retour en haut */
     #topBtn {
       display: none;
       position: fixed;
@@ -160,146 +187,130 @@
       cursor: pointer;
       padding: 12px;
       border-radius: 10px;
-  }
+    }
+
     #topBtn:hover {
       background-color: #003366;
-  }
+    }
+
+    /* Responsive mobile */
     @media (max-width: 600px) {
-  .box {
-    width: 100%;         /* occupe toute la largeur sur petit écran */
-    height: auto;        /* laisse la hauteur s’adapter au contenu */
-    padding: 30px;
-  }
-  .box a {
-    font-size: 32px;     /* encore plus lisible */
-  }
-  .explanation {
-    font-size: 18px;
-  }
-}
+      .box {
+        width: 100%;
+        height: auto;
+        padding: 30px;
+      }
+      .box a {
+        font-size: 32px;
+      }
+      .explanation {
+        font-size: 18px;
+      }
+      .left-col {
+        width: 100%;
+      }
+    }
   </style>
 </head>
-<body>
-  <!DOCTYPE html>
-<html lang="fr">
-<head>
-  <!-- Ici le contenu invisible au visiteur (meta, titre, styles) -->
-</head>
 
 <body>
- 
-  <!-- Autres contenus ici -->
+  <div class="welcome-banner">🎙️ Welcome to the world of the self-taught sound technician / Bienvenue dans l’univers du technicien du son autodidacte Alain Ayenan</div>
 
-</body>
-</html>
-
-
-<div class="welcome-banner">🎙️ Welcome to the world of the self-taught sound technician / Bienvenue dans l’univers du technicien du son autodidacte Alain Ayenan</div>
   <div class="header">
-  <img src="portrait1.jpg" alt="Alain Ayenan 1">
-  <div class="center-title">
-    <div class="title">Alain Ayenan</div>
-    <div class="subtitle">Ingénieur du Son – Studio & Live</div>
-    <div class="subtitle">Silence inspire me, sound expresses me and passion guides me.</div>
-    <div class="subtitle">Le silence m'inspire, le son m'exprime et la passion me guide.</div>
-    <a href="contact.html" class="btn-contact">📞 Joining / Contact</a>
-  </div>
-  <img src="portrait2.jpg" alt="Alain Ayenan 2">
-</div>
-
-<div class="section">
-  <h2>Introduction / Présentation</h2>
-  <p>Trained in sound recording and mixing by Mr. Euloge ASSOURAMOU, Alain Ayenan is a sound professional with over 15 years of experience in mixing, mastering, live sound reinforcement, multi-track concert recording, and audio processing. / 
-    Formé à la prise de son et au mixage par Monsieur Euloge ASSOURAMOU, Alain Ayenan est un professionnel du son doté de plus de 15 ans d'expérience dans le mixage, le mastering, la sonorisation live, l’enregistrement multi-pistes de concerts et le traitement audio.</p>
-
-  <h2>Skills / Compétences</h2>
-  <ul>
-    <li>🎚️ Mixage & Mastering (Studio & Live)</li>
-    <li>🎧 Traitement Audio & Nettoyage Sonore</li>
-    <li>💻 Logiciels : Cubase, Pro Tools, Reaper, Audacity</li>
-    <li>🎛️ Consoles : Midas, Yamaha, Behringer, Allen & Heath</li>
-    <li>🔊 Installation de systèmes audio professionnels</li>
-  </ul>
-
-  <h2>Studio Works / Réalisations Studio</h2>
-  <div class="content-flex">
-    <div class="left-col">
-      <ul>
-        <li>Aunty – Akel</li>
-        <li>La Promesse de Dieu – Vinphint</li>
-        <li>Okpê – Ayodélé</li>
-        <li>Hongan – Don Metok</li>
-        <li>No Time – Akel</li>
-        <li>Enfant – Roselyne OLORY</li>
-        <li>Nam'ablo – Almok</li>
-        <li>Ahelou – Roselyne OLORY</li>
-        <li>Victory – Frère Théodule DOSSOU</li>
-        <li>Vanité – Masto Djee</li>
-        <li>Seul – Zouley SANGARE</li>
-      </ul>
+    <img src="portrait1.jpg" alt="Alain Ayenan 1">
+    <div class="center-title">
+      <div class="title">Alain Ayenan</div>
+      <div class="subtitle">Ingénieur du Son – Studio & Live</div>
+      <div class="subtitle">Silence inspire me, sound expresses me and passion guides me.</div>
+      <div class="subtitle">Le silence m'inspire, le son m'exprime et la passion me guide.</div>
+      <a href="contact.html" class="btn-contact">📞 Joining / Contact</a>
     </div>
-    <div class="box audio-box">
-      <a href="styles_audio.html">🎼 Audio Styles / Listen</a>
-      <div class="explanation">Écoute les styles du son musical travaillé par Alain</div>
-    </div>
+    <img src="portrait2.jpg" alt="Alain Ayenan 2">
   </div>
 
-  <h2>Live Shows & Events / Concerts Live & Événements</h2>
-  <ul>
-    <li>🎤 Festival Biennale de Ouidah – Bonbon Vodou, Erol Josué, Koudy Fagbemi...</li>
-    <li>🎤 Concert Hommage à Boncana Maiga – Aïcha Koné, Sekoumba Bambino...</li>
-    <li>🎤 Festival Wémèhwé – Sagbohan Danialou, Zenab Abib, Ricos Campos</li>
-    <li>🎤 Concert Cœur à Cœur – Sessime, Nikanort</li>
-  </ul>
-  
-  <h2>Portfolio / Portfolio</h2>
-<div class="content-flex">
-  <div class="left-col">
+  <div class="section">
+    <h2>Introduction / Présentation</h2>
+    <p>Trained in sound recording and mixing by Mr. Euloge ASSOURAMOU, Alain Ayenan is a sound professional with over 15 years of experience in mixing, mastering, live sound reinforcement, multi-track concert recording, and audio processing. / 
+      Formé à la prise de son et au mixage par Monsieur Euloge ASSOURAMOU, Alain Ayenan est un professionnel du son doté de plus de 15 ans d'expérience dans le mixage, le mastering, la sonorisation live, l’enregistrement multi-pistes de concerts et le traitement audio.</p>
+
+    <h2>Skills / Compétences</h2>
     <ul>
-      <li><a href="https://youtu.be/1vK5WYijmLE?si=-81DFpX7ssDORqyk" target="_blank">Audio – Okpê (Ayodélé)</a></li>
-<li><a href="https://youtu.be/xXAH_J2qljI?si=Hp_Lkub4iEw41ZSL" target="_blank">Clip – Hongan (Don Metok)</a></li>
-<li><a href="https://youtu.be/3rwLe9ujURU?si=WDMNWanX8e1G0A9S" target="_blank">Clip – Enfant (Roselyne OLORY)</a></li>
-<li><a href="https://youtu.be/7yYAzxOoye0?si=O21NDEivGousR2Yi" target="_blank">Clip – Nam'ablo (Almok)</a></li>
-<li><a href="https://youtu.be/6u2yWhfdIa8?si=yCaviSXhsXyjIWgA" target="_blank">Clip – Ton Amour (Frère Theodule Dossou)</a></li>
-<li><a href="https://youtu.be/niN0h-AcpnQ?si=rq5VLEWAq0IArFtD" target="_blank">Clip – Ahelou (Roselyne OLORY)</a></li>
-    <li><a href="https://www.facebook.com/share/v/1CVFSmcDor/" target="_blank">Reportage Amateur concert coeur à coeur</a></li> 
-      <li><a href="https://www.facebook.com/share/v/18FQZL3Vec/" target="_blank">Reportage – ORTB (Hommage Boncana Maiga)</a></li>
-      <li><a href="https://www.facebook.com/share/p/19RffViWCt/" target="_blank">Prestation – Bonbon Vodou</a></li>
-      <li><a href="https://www.facebook.com/share/v/17ckxy5MSZ/" target="_blank">Prestation – Erol Josué</a></li>
-      <li><a href="https://www.facebook.com/share/v/15YnUrgfQ6/" target="_blank">Prestation – Koudy Fagbemi</a></li>
+      <li>🎚️ Mixage & Mastering (Studio & Live)</li>
+      <li>🎧 Traitement Audio & Nettoyage Sonore</li>
+      <li>💻 Logiciels : Cubase, Pro Tools, Reaper, Audacity</li>
+      <li>🎛️ Consoles : Midas, Yamaha, Behringer, Allen & Heath</li>
+      <li>🔊 Installation de systèmes audio professionnels</li>
     </ul>
+
+    <h2>Studio Works / Réalisations Studio</h2>
+    <div class="content-flex">
+      <div class="left-col">
+        <ul>
+          <li>Aunty – Akel</li>
+          <li>La Promesse de Dieu – Vinphint</li>
+          <li>Okpê – Ayodélé</li>
+          <li>Hongan – Don Metok</li>
+          <li>No Time – Akel</li>
+          <li>Enfant – Roselyne OLORY</li>
+          <li>Nam'ablo – Almok</li>
+          <li>Ahelou – Roselyne OLORY</li>
+          <li>Victory – Frère Théodule DOSSOU</li>
+          <li>Vanité – Masto Djee</li>
+          <li>Seul – Zouley SANGARE</li>
+        </ul>
+      </div>
+
+      <div class="box audio-box">
+        <a href="styles_audio.html">🎼 Audio Styles / Listen</a>
+        <div class="explanation">Écoute les styles du son musical travaillé par Alain</div>
+      </div>
+    </div>
+
+    <h2>Portfolio / Portfolio</h2>
+    <div class="content-flex">
+      <div class="left-col">
+        <ul>
+          <li><a href="https://youtu.be/1vK5WYijmLE" target="_blank">Audio – Okpê (Ayodélé)</a></li>
+          <li><a href="https://youtu.be/xXAH_J2qljI" target="_blank">Clip – Hongan (Don Metok)</a></li>
+          <li><a href="https://youtu.be/3rwLe9ujURU" target="_blank">Clip – Enfant (Roselyne OLORY)</a></li>
+          <li><a href="https://youtu.be/7yYAzxOoye0" target="_blank">Clip – Nam'ablo (Almok)</a></li>
+          <li><a href="https://youtu.be/6u2yWhfdIa8" target="_blank">Clip – Ton Amour (Frère Theodule Dossou)</a></li>
+          <li><a href="https://youtu.be/niN0h-AcpnQ" target="_blank">Clip – Ahelou (Roselyne OLORY)</a></li>
+        </ul>
+      </div>
+
+      <div class="box gallery-box">
+        <a href="galerie.html">📷 Photo Gallery</a>
+        <div class="explanation">Galerie photos de Alain</div>
+      </div>
+    </div>
   </div>
-  <div class="box gallery-box">
-    <a href="galerie.html">📷 Photo Gallery</a>
-    <div class="explanation">Galerie photos de Alain</div>
-   </div>
-</div>
 
-<button onclick="topFunction()" id="topBtn" title="Retour en haut">⬆️</button>
+  <button onclick="topFunction()" id="topBtn" title="Retour en haut">⬆️</button>
 
-<div class="contact">
-  📧 Email : mixageproaudio@gmail.com<br />
-  📞 Téléphone : (00229) 0165648655 / 0195082041
-</div>
-<p><p>📌 Retrouvez tous mes liens ici : <a href="https://linktr.ee/alainayenan" target="_blank" rel="noopener noreferrer">linktr.ee/alainayenan</a></p></p>
+  <div class="contact">
+    📧 Email : mixageproaudio@gmail.com<br />
+    📞 Téléphone : (00229) 0165648655 / 0195082041
+  </div>
 
-<footer>
-  © 2025 Alain Ayenan – Tous droits réservés
-</footer>
+  <p>📌 Retrouvez tous mes liens ici : <a href="https://linktr.ee/alainayenan" target="_blank" rel="noopener noreferrer">linktr.ee/alainayenan</a></p>
 
-<script>
-  let topBtn = document.getElementById("topBtn");
-  window.onscroll = function() {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      topBtn.style.display = "block";
-    } else {
-      topBtn.style.display = "none";
+  <footer>
+    © 2025 Alain Ayenan – Tous droits réservés
+  </footer>
+
+  <script>
+    let topBtn = document.getElementById("topBtn");
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+    };
+    function topFunction() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-  };
-  function topFunction() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-</script>
-
+  </script>
 </body>
 </html>
