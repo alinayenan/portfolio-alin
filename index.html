@@ -3,18 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Libin Landing Page</title>
-  <link rel="stylesheet" href="libin.css">
+  <title>Landing - Alain AYENAN</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="overlay">
-    <div class="content">
+  <section class="landing">
+    <div class="landing-content">
       <h1>🎶 The story of Alain AYENAN begins here</h1>
       <p>🌍 Discover his professional journey and the people he has met along the way…</p>
       <h1>🎶 L’histoire d’Alain AYENAN commence ici</h1>
       <p>🌍 Découvrez son parcours professionnel et les personnes qu’il a rencontrées en chemin…</p>
-      <a href="index.html" class="btn">Click here / Cliquez ici</a>
+      <a href="index.html">Cliquez ici</a>
     </div>
-  </div>
+  </section>
 </body>
 </html>
+/* Style global */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Section principale */
+.landing {
+  background: url("landing.jpg") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+/* Superposition sombre pour lisibilité */
+.landing::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Texte */
+.landing-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.landing-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.landing-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Bouton */
+.landing-content a {
+  display: inline-block;
+  background: #ffcc00;
+  color: black;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.landing-content a:hover {
+  background: #e6b800;
+  transform: scale(1.05);
+}
