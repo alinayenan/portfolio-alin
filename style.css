@@ -6,7 +6,7 @@ body {
     min-height: 100vh;
 
     /* Image de fond adaptative */
-    background-image: url('tonimage.jpg');
+    background-image: url('landing.jpg');
     background-repeat: no-repeat;
     background-size: cover;          /* Couvre tout l’écran */
     background-position: center center; /* Toujours centré */
@@ -111,3 +111,4 @@ body {
         background-color: #000;   /* couleur de fond si bandes noires */
     }
 }
+
