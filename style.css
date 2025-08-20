@@ -8,7 +8,7 @@ html, body {
 
 /* Image de fond */
 body {
-    background-image: url('tonimage.jpg');
+    background-image: url('landing.jpg');
     background-repeat: no-repeat;
     background-size: cover;          /* Remplit tout l'écran */
     background-position: center center;
@@ -97,3 +97,4 @@ body {
         font-size: 1rem;
     }
 }
+
