@@ -1,38 +1,39 @@
-/* Corps de la page */
-body {
+/* Assurer que html et body remplissent tout l'écran */
+html, body {
     height: 100%;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    min-height: 100vh;
+}
 
-    /* Image de fond adaptative */
-    background-image: url('landing.jpg');
+/* Image de fond */
+body {
+    background-image: url('tonimage.jpg');
     background-repeat: no-repeat;
-    background-size: cover;          /* Couvre tout l’écran */
-    background-position: center center; /* Toujours centré */
-    background-attachment: scroll;    /* Parallaxe sur desktop */
+    background-size: cover;          /* Remplit tout l'écran */
+    background-position: center center;
+    background-attachment: fixed;    /* Parallaxe sur desktop */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Conteneur de contenu */
 .container {
-    background-color: rgba(255, 255, 255, 0.85); /* Fond blanc transparent */
+    background-color: rgba(255, 255, 255, 0.85);
     padding: 40px;
     border-radius: 12px;
     text-align: center;
     max-width: 600px;
-    margin: auto;
-    margin-top: 10vh;
     box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 
-/* Titre */
+/* Titres et texte */
 .container h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-/* Texte */
 .container p {
     font-size: 1.2rem;
     margin-bottom: 30px;
@@ -77,12 +78,10 @@ body {
     box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
 
-/* Ajustements pour téléphones */
+/* Ajustements pour mobiles */
 @media (max-width: 768px) {
     body {
-        background-attachment: scroll; /* évite bug de parallaxe sur mobile */
-        background-size: cover;        /* toujours couvrir tout l’écran */
-        background-position: center center;
+        background-attachment: scroll; /* Fixe peut poser problème sur mobile */
     }
 
     .container {
@@ -98,21 +97,3 @@ body {
         font-size: 1rem;
     }
 }
-
-/* Ajustement avancé pour tous les ratios d’image */
-@media (min-aspect-ratio: 16/9) {
-    body {
-        background-size: cover; /* écran large */
-    }
-}
-
-@media (max-aspect-ratio: 16/9) {
-    body {
-        background-size: contain; /* écran très étroit ou portrait */
-        background-color: #000;   /* couleur de fond si bandes noires */
-    }
-}
-
-
-
-
