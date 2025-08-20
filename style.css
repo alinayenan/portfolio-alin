@@ -8,7 +8,7 @@ body {
     /* Image de fond adaptative */
     background-image: url('landing.jpg');
     background-repeat: no-repeat;
-    background-size: cover;          /* Couvre tout l’écran */
+    background-size: contain;          /* Couvre tout l’écran */
     background-position: center center; /* Toujours centré */
     background-attachment: fixed;    /* Parallaxe sur desktop */
 }
@@ -111,4 +111,5 @@ body {
         background-color: #000;   /* couleur de fond si bandes noires */
     }
 }
+
 
