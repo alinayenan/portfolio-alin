@@ -1,5 +1,6 @@
 /* Corps de la page */
 body {
+    height: 100%;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -8,7 +9,7 @@ body {
     /* Image de fond adaptative */
     background-image: url('landing.jpg');
     background-repeat: no-repeat;
-    background-size: contain;          /* Couvre tout l’écran */
+    background-size: cover;          /* Couvre tout l’écran */
     background-position: center center; /* Toujours centré */
     background-attachment: fixed;    /* Parallaxe sur desktop */
 }
@@ -111,5 +112,6 @@ body {
         background-color: #000;   /* couleur de fond si bandes noires */
     }
 }
+
 
 
