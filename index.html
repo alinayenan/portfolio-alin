@@ -1,112 +1,20 @@
-/* -------------------------------
-   CSS FINAL - Page Landing LIBIN
---------------------------------*/
-
-/* Reset de base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", Arial, sans-serif;
-}
-
-/* Structure générale */
-body, html {
-  height: 100%;
-  width: 100%;
-}
-
-/* Section principale avec image de fond */
-.landing {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  background: url("image-fond.jpg") no-repeat center center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  padding: 20px;
-}
-
-/* Overlay sombre pour lisibilité */
-.landing::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 0;
-}
-
-/* Contenu au-dessus de l’overlay */
-.landing-content {
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
-}
-
-/* Titre principal */
-.landing h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-/* Sous-titre / phrase d’accroche */
-.landing h2 {
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-bottom: 25px;
-  color: #f1f1f1;
-}
-
-/* Bloc texte bilingue */
-.landing .description {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  color: #ddd;
-}
-
-/* Bouton principal */
-.landing .btn {
-  display: inline-block;
-  padding: 12px 28px;
-  background: #ffcc00;
-  color: #000;
-  font-weight: 600;
-  font-size: 1rem;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.landing .btn:hover {
-  background: #ffaa00;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .landing h1 {
-    font-size: 2.2rem;
-  }
-  .landing h2 {
-    font-size: 1.2rem;
-  }
-  .landing .description {
-    font-size: 0.95rem;
-  }
-  .landing .btn {
-    padding: 10px 22px;
-    font-size: 0.95rem;
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing - Alain AYENAN</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="landing">
+    <div class="landing-content">
+      <h1>🎶 The story of Alain AYENAN begins here</h1>
+      <p>🌍 Discover his professional journey and the people he has met along the way…</p>
+      <h1>🎶 L’histoire d’Alain AYENAN commence ici</h1>
+      <p>🌍 Découvrez son parcours professionnel et les personnes qu’il a rencontrées en chemin…</p>
+      <a href="index.html">Cliquez ici</a>
+    </div>
+  </section>
+</body>
+</html>
