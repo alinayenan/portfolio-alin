@@ -30,14 +30,65 @@
       margin-bottom: 30px;
     }
     table {
-      width: 100%;
-      border-collapse: collapse;
-      background-color: white;
+      /* Style général du tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* largeur automatique selon contenu */
+}
+
+/* Style des cellules */
+th, td {
+    padding: 8px 12px;
+    text-align: left;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Observation : colonne adaptative mais max 200px */
+th:nth-child(5), td:nth-child(5) { 
+    max-width: 200px; 
+}
+
+/* Lecture : colonne toujours large pour le bouton Play */
+th:nth-child(6), td:nth-child(6) { 
+    width: 120px;  
+    text-align: center;
+}
+
+/* Style du bouton Play */
+.play-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 6px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Tableau responsive pour mobile */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto; /* scroll horizontal si trop large */
+        white-space: nowrap;
     }
+
     th, td {
-      padding: 12px;
-      border: 1px solid #ccc;
-      text-align: center;
+        padding: 6px 10px;
+    }
+
+    /* Observation plus étroite sur mobile */
+    th:nth-child(5), td:nth-child(5) { 
+        max-width: 150px; 
+    }
+
+    /* Lecture reste suffisamment large pour le bouton Play */
+    th:nth-child(6), td:nth-child(6) { 
+        width: 100px;
+    }
+}
     }
     tr:nth-child(even) {
       background-color: #f0f8ff;
