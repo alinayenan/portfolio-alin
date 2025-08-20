@@ -11,7 +11,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;          /* Couvre tout l’écran */
     background-position: center center; /* Toujours centré */
-    background-attachment: fixed;    /* Parallaxe sur desktop */
+    background-attachment: scroll;    /* Parallaxe sur desktop */
 }
 
 /* Conteneur de contenu */
@@ -112,6 +112,7 @@ body {
         background-color: #000;   /* couleur de fond si bandes noires */
     }
 }
+
 
 
 
