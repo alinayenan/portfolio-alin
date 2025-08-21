@@ -307,6 +307,67 @@ th:nth-child(6), td:nth-child(6) {
    </tr>
 </table>
 
+  <!-- Lecteur global personnalisé -->
+<div id="custom-player" style="display:none; position:fixed; bottom:20px; left:50%; transform:translateX(-50%);
+  background:#fff; border:2px solid #0066cc; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.2);
+  width:90%; max-width:600px; padding:15px; z-index:1000;">
+
+  <div style="display:flex; align-items:center; gap:15px;">
+    <!-- Photo -->
+    <img src="playphoto.jpg" alt="images" style="width:80px; height:80px; border-radius:50%; object-fit:cover;">
+
+    <!-- Infos chanson -->
+    <div style="flex:1;">
+      <h3 id="song-title" style="margin:0; font-size:18px; color:#005bb5;">Titre en cours</h3>
+      <p id="song-info" style="margin:4px 0; font-size:14px; color:#333;">Infos...</p>
+
+      <!-- Audio global -->
+      <audio id="main-audio" controls style="width:100%;">
+        <source src="" type="audio/mpeg">
+        Votre navigateur ne supporte pas l’audio.
+      </audio>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const rows = document.querySelectorAll("table tr"); 
+  const player = document.getElementById("custom-player");
+  const mainAudio = document.getElementById("main-audio");
+  const songTitle = document.getElementById("song-title");
+  const songInfo = document.getElementById("song-info");
+
+  rows.forEach(row => {
+    const audio = row.querySelector("audio");
+    if (audio) {
+      audio.addEventListener("play", function () {
+        // Pause les autres lecteurs du tableau
+        document.querySelectorAll("table audio").forEach(a => { if (a !== audio) a.pause(); });
+
+        // Récupère les infos
+        const title = row.cells[3].innerText;  
+        const info = row.cells[4].innerText;  
+
+        // Mets à jour le lecteur global
+        songTitle.textContent = title;
+        songInfo.textContent = info;
+        mainAudio.src = audio.querySelector("source").src;
+        mainAudio.play();
+
+        // Affiche le lecteur global
+        player.style.display = "block";
+      });
+    }
+  });
+
+  // Quand la musique du lecteur global s’arrête → cacher
+  mainAudio.addEventListener("ended", function () {
+    player.style.display = "none";
+  });
+});
+</script>
+  
 </body>
   
  <!-- Bouton retour -->
