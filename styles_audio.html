@@ -1,110 +1,21 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F0RNN2HZN4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-F0RNN2HZN4');
-</script>
   <meta charset="UTF-8">
   <title>Styles musicaux travaillés</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #e6f0fa;
-      margin: 0;
-      padding: 30px;
-    }
-    h2 {
-      text-align: center;
-      color: #005bb5;
-      margin-bottom: 30px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    th, td {
-      padding: 8px 12px;
-      text-align: center;
-      border: 1px solid #ccc;
-    }
-    tr:nth-child(even) {
-      background-color: #f0f8ff;
-    }
-
-    /* Bouton jaune “pli” avec animation */
-    .play-btn {
-      cursor: pointer;
-      width: 40px;
-      height: 40px;
-      background-color: #FFD700; /* jaune doré */
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      display: inline-block;
-      transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
-    }
-    .play-btn:hover {
-      transform: scale(1.2) rotate(5deg);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-
-    /* Couleur quand la musique joue */
-    .playing {
-      background-color: #FF8C00; /* orange foncé */
-    }
-
-    audio {
-      width: 100%;
-    }
-    @media (max-width: 768px) {
-      table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-      }
-      th, td {
-        padding: 6px 10px;
-      }
-    }
-
-    /* Lecteur global */
-    #custom-player {
-      display:none;
-      position:fixed;
-      bottom:20px;
-      left:50%;
-      transform:translateX(-50%);
-      background:#fff;
-      border:2px solid #0066cc;
-      border-radius:12px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.2);
-      width:90%;
-      max-width:600px;
-      padding:15px;
-      z-index:1000;
-    }
+    body { font-family: Arial, sans-serif; background-color: #e6f0fa; margin:0; padding:30px; }
+    h2 { text-align:center; color:#005bb5; margin-bottom:30px; }
+    table { width:100%; border-collapse: collapse; }
+    th, td { padding:8px 12px; text-align:center; border:1px solid #ccc; }
+    tr:nth-child(even) { background-color:#f0f8ff; }
+    .play-btn { cursor:pointer; width:40px; height:40px; background-color:#FFD700; border:none; border-radius:6px; display:inline-block; }
+    audio { width:100%; }
+    @media (max-width:768px) { table { display:block; overflow-x:auto; white-space:nowrap; } th, td { padding:6px 10px; } }
+    #custom-player { display:none; position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:#fff; border:2px solid #0066cc; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.2); width:90%; max-width:600px; padding:15px; z-index:1000; }
     #custom-player h3 { margin:0; font-size:18px; color:#005bb5; }
     #custom-player p { margin:4px 0; font-size:14px; color:#333; }
-    #close-player {
-      cursor:pointer;
-      background:red;
-      color:white;
-      border:none;
-      border-radius:50%;
-      width:24px;
-      height:24px;
-      text-align:center;
-      line-height:24px;
-      font-weight:bold;
-      position:absolute;
-      top:10px;
-      right:10px;
-    }
+    #close-player { cursor:pointer; background:red; color:white; border:none; border-radius:50%; width:24px; height:24px; text-align:center; line-height:24px; font-weight:bold; position:absolute; top:10px; right:10px; }
   </style>
 </head>
 <body>
@@ -115,200 +26,33 @@
 </p>
 
 <table>
-  <tr>
-    <th>Nº</th>
-    <th>Année</th>
-    <th>Style du son</th>
-    <th>Artiste & Titre</th>
-    <th>Observation</th>
-    <th>Lecture</th>
-  </tr>
-  <tr>
-    <td>01</td>
-    <td>2025</td>
-    <td>Tradi-Moderne</td>
-    <td>Theodule Dossou - Children Of Destiny</td>
-    <td>Enregistrement & Mixage & Mastering</td>
-    <td><button class="play-btn" data-src="theodule_dossou_children_of_destiny.mp3"></button></td>
-  </tr>
-  <tr>
-    <td>02</td>
-    <td>2025</td>
-    <td>Gospel</td>
-    <td>Hospice Gerard - hɛn lìn</td>
-    <td>Mastering</td>
-    <td><button class="play-btn" data-src="hospice_gerard_hɛn_lìn.mp3"></button></td>
-  </tr>
-  <tr>
-    <td>03</td>
-    <td>2025</td>
-    <td>Slow Gospel</td>
-    <td>Hospice Gerard - ma reconnaissance</td>
-    <td>Enregistrement & Mixage & Mastering</td>
-    <td><button class="play-btn" data-src="hospice_gerard_ma_reconnaissance.mp3"></button></td>
-  </tr
-  <tr>
-    <td>04</td>
-    <td>2025</td>
-    <td>Tradi Gospel Medley</td>
-    <td>Hospice Gerard - Doo nú wé medley</td>
-    <td>Enregistrement & Mixage & Mastering</td>
-    <td><button class="play-btn" data-src="hospice_gerard_doo_nu_we_medley.mp3"></button></td>
-  </tr>
-  <tr>
-    <td>05</td>
-    <td>2023</td>
-    <td>Tradi Medley</td>
-    <td>Ayodele - Okpe</td>
-    <td>Mixage & Mastering</td>
-    <td><button class="play-btn" data-src="ayodele_okpe.mp3"></button></td>
-  </tr>
-  <tr>
-    <td>06</td>
-    <td>2021</td>
-    <td>Afrobeatpop</td>
-    <td>Almok – Nam'ablo</td>
-    <td>Mastering</td>
-    <td><button class="play-btn" data-src="almok_namablo.mp3"></button></td>
-  </tr>
-  <tr>
-    <td>07</td>
-    <td>2020</td>
-    <td>Afrobeat</td>
-    <td>Akel – No Time</td>
-    <td>Enregistrement & Mixage & Mastering</td>
-    <td><button class="play-btn" data-src="akel_no_time.mp3"></button></td>
-  </tr>
-  <tr>
-    <td>08</td>
-    <td>2018</td>
-    <td>Tradipop</td>
-    <td>Akel – Aunty</td>
-    <td>Enregistrement & Mixage & Mastering</td>
-    <td><button class="play-btn" data-src="akel_aunty.mp3"></button></td>
-  </tr>
-  <tr>
-    <td>09</td>
-    <td>2016</td>
-    <td>Zouk</td>
-    <td>Judith – Je t’attendrai</td>
-    <td>Enregistrement & Mixage & Mastering</td>
-    <td><button class="play-btn" data-src="judith_je_tattendrai.mp3"></button></td>
-  </tr>
-  <tr>
-    <td>10</td>
-    <td>2016</td>
-    <td>Zouk</td>
-    <td>Judith – Dans tes bras</td>
-    <td>Enregistrement & Mixage & Mastering</td>
-    <td><button class="play-btn" data-src="judith_dans_tes_bras.mp3"></button></td>
-  </tr>
-  <tr>
-    <td>11</td>
-    <td>2016</td>
-    <td>Salsa</td>
-    <td>Judith – Mi tcho mide</td>
-    <td>Enregistrement & Mixage & Mastering</td>
-    <td><button class="play-btn" data-src="judith_mi_tcho_mide.mp3"></button></td>
-  </tr>
-  <tr>
-    <td>12</td>
-    <td>2018</td>
-    <td>Tradi-moderne</td>
-    <td>Roselyne Olory - Ahelou</td>
-    <td>Enregistrement & Mixage & Mastering</td>
-    <td><button class="play-btn" data-src="roselyne_olory_ahelou.mp3"></button></td>
-  </tr>
-  <tr>
-    <td>13</td>
-    <td>2018</td>
-    <td>Funk</td>
-    <td>Roselyne Olory - Enfant</td>
-    <td>Enregistrement & Mixage & Mastering</td>
-    <td><button class="play-btn" data-src="roselyne_olory_enfant.mp3"></button></td>
-  </tr>
-  <tr>
-    <td>14</td>
-    <td>2014</td>
-    <td>Funk</td>
-    <td>P. Martins - Dagbe</td>
-    <td>Enregistrement & Mixage & Mastering</td>
-    <td><button class="play-btn" data-src="p_martins_dagbe.mp3"></button></td>
-  </tr>
-  <tr>
-    <td>15</td>
-    <td>2015</td>
-    <td>Funk pop</td>
-    <td>Masto Djee - Mawuena</td>
-    <td>Enregistrement & Pré Mixage</td>
-    <td><button class="play-btn" data-src="masto_djee_mawuena.mp3"></button></td>
-  </tr>
-  <tr>
-    <td>16</td>
-    <td>2015</td>
-    <td>Bossa</td>
-    <td>Masto Djee - Mawuyin</td>
-    <td>Enregistrement & Pré Mixage</td>
-    <td><button class="play-btn" data-src="masto_djee_mawuyin.mp3"></button></td>
-  </tr>
-  <tr>
-    <td>17</td>
-    <td>2012</td>
-    <td>Funk pop</td>
-    <td>Don Metok - Adjolomi Senan</td>
-    <td>Enregistrement & Pré Mixage</td>
-    <td><button class="play-btn" data-src="don_metok_adjolomi_senan.mp3"></button></td>
-  </tr>
-  <tr>
-    <td>18</td>
-    <td>2012</td>
-    <td>Tradi Moderne</td>
-    <td>Don Metok - Hokpo</td>
-    <td>Enregistrement & Pré Mixage</td>
-    <td><button class="play-btn" data-src="don_metok_hokpo.mp3"></button></td>
-  </tr>
-  <tr>
-    <td>19</td>
-    <td>2012</td>
-    <td>Tradi Moderne</td>
-    <td>Don Metok - Sounou Takin</td>
-    <td>Enregistrement & Pré Mixage</td>
-    <td><button class="play-btn" data-src="don_metok_sounou_takin.mp3"></button></td>
-  </tr>
-  <tr>
-    <td>20</td>
-    <td>2007</td>
-    <td>Tradi Moderne</td>
-    <td>Zouley Sangare - Mami Yogo</td>
-    <td>Enregistrement & Edition</td>
-    <td><button class="play-btn" data-src="zouley_sangare_mami_yogo.mp3"></button></td>
-  </tr>
-  <tr>
-    <td>21</td>
-    <td>2007</td>
-    <td>Tradi Moderne</td>
-    <td>Zouley Sangare - Suru</td>
-    <td>Enregistrement & Edition</td>
-    <td><button class="play-btn" data-src="zouley_sangare_suru.mp3"></button></td>
-  </tr>
-  <tr>
-    <td>22</td>
-    <td>2007</td>
-    <td>Tradi Moderne</td>
-    <td>Zouley Sangare - Sombourou</td>
-    <td>Enregistrement & Edition</td>
-    <td><button class="play-btn" data-src="zouley_sangare_sombourou.mp3"></button></td>
-  </tr>
-  <tr>
-    <td>23</td>
-    <td>2007</td>
-    <td>Tradi Moderne</td>
-    <td>Zouley Sangare - Gnidagbe</td>
-    <td>Enregistrement & Edition</td>
-    <td><button class="play-btn" data-src="zouley_sangare_gnidagbe.mp3"></button></td>
-  </tr>
-  <tr>
-  <!-- Ajoute les autres lignes ici de la même manière -->
+<tr>
+<th>Nº</th><th>Année</th><th>Style du son</th><th>Artiste & Titre</th><th>Observation</th><th>Lecture</th>
+</tr>
+
+<tr><td>01</td><td>2025</td><td>Tradi-Moderne</td><td>Theodule Dossou - Children Of Destiny</td><td>Enregistrement & Mixage & Mastering</td><td><button class="play-btn" data-src="theodule_dossou_children_of_destiny.mp3"></button></td></tr>
+<tr><td>02</td><td>2025</td><td>Gospel</td><td>Hospice Gerard - hɛn lìn</td><td>Mastering</td><td><button class="play-btn" data-src="hospice_gerard_hɛn lìn.mp3"></button></td></tr>
+<tr><td>03</td><td>2025</td><td>Slow Gospel</td><td>Hospice Gerard - ma reconnaissance</td><td>Enregistrement & Mixage & Mastering</td><td><button class="play-btn" data-src="hospice_gereard_ma_reconnaissance.mp3"></button></td></tr>
+<tr><td>04</td><td>2025</td><td>Tradi Gospel Medley</td><td>Hospice Gerard - Doo nú wé medley</td><td>Enregistrement & Mixage & Mastering</td><td><button class="play-btn" data-src="hospice_gerard_doo_nú_wé_medley.mp3"></button></td></tr>
+<tr><td>05</td><td>2023</td><td>Tradi Medley</td><td>Ayodele - Okpe</td><td>Mixage & Mastering</td><td><button class="play-btn" data-src="ayodele_okpe.mp3"></button></td></tr>
+<tr><td>06</td><td>2021</td><td>Afrobeatpop</td><td>Almok – Nam'ablo</td><td>Mastering</td><td><button class="play-btn" data-src="almok_nam'ablo.mp3"></button></td></tr>
+<tr><td>07</td><td>2020</td><td>Afrobeat</td><td>Akel – No Time</td><td>Enregistrement & Mixage & Mastering</td><td><button class="play-btn" data-src="akel_no_time.mp3"></button></td></tr>
+<tr><td>08</td><td>2018</td><td>Tradipop</td><td>Akel – Aunty</td><td>Enregistrement & Mixage & Mastering</td><td><button class="play-btn" data-src="akel_aunty.mp3"></button></td></tr>
+<tr><td>09</td><td>2016</td><td>Zouk</td><td>Judith – Je t’attendrai</td><td>Enregistrement & Mixage & Mastering</td><td><button class="play-btn" data-src="judith_je_t'attendrai.mp3"></button></td></tr>
+<tr><td>10</td><td>2016</td><td>Zouk</td><td>Judith – Dans tes bras</td><td>Enregistrement & Mixage & Mastering</td><td><button class="play-btn" data-src="judith_dans_tes_bras.mp3"></button></td></tr>
+<tr><td>11</td><td>2016</td><td>Salsa</td><td>Judith – Mi tcho mide</td><td>Enregistrement & Mixage & Mastering</td><td><button class="play-btn" data-src="judith_mi_tcho_mide.mp3"></button></td></tr>
+<tr><td>12</td><td>2018</td><td>Tradi-moderne</td><td>Roselyne Olory - Ahelou</td><td>Enregistrement & Mixage & Mastering</td><td><button class="play-btn" data-src="roselyne_olory_ahelou.mp3"></button></td></tr>
+<tr><td>13</td><td>2018</td><td>Funk</td><td>Roselyne Olory - Enfant</td><td>Enregistrement & Mixage & Mastering</td><td><button class="play-btn" data-src="roselyne_olory_enfant.mp3"></button></td></tr>
+<tr><td>14</td><td>2014</td><td>Funk</td><td>P. Martins - Dagbe</td><td>Enregistrement & Mixage & Mastering</td><td><button class="play-btn" data-src="p._martins_dagbe.mp3"></button></td></tr>
+<tr><td>15</td><td>2015</td><td>Funk pop</td><td>Masto Djee - Mawuena</td><td>Enregistrement & Pré Mixage</td><td><button class="play-btn" data-src="masto_djee_mawuena.mp3"></button></td></tr>
+<tr><td>16</td><td>2015</td><td>Bossa</td><td>Masto Djee - Mawuyin</td><td>Enregistrement & Pré Mixage</td><td><button class="play-btn" data-src="masto_djee_mawuyin.mp3"></button></td></tr>
+<tr><td>17</td><td>2012</td><td>Funk pop</td><td>Don Metok - Adjolomi Senan</td><td>Enregistrement & Pré Mixage</td><td><button class="play-btn" data-src="don_metok_adjolomi_senan.mp3"></button></td></tr>
+<tr><td>18</td><td>2012</td><td>Tradi Moderne</td><td>Don Metok - Hokpo</td><td>Enregistrement & Pré Mixage</td><td><button class="play-btn" data-src="don_metok_hokpo.mp3"></button></td></tr>
+<tr><td>19</td><td>2012</td><td>Tradi Moderne</td><td>Don Metok - Sounou Takin</td><td>Enregistrement & Pré Mixage</td><td><button class="play-btn" data-src="don_metok_sounou_takin.mp3"></button></td></tr>
+<tr><td>20</td><td>2007</td><td>Tradi Moderne</td><td>Zouley Sangare - Mami Yogo</td><td>Enregistrement & Edition</td><td><button class="play-btn" data-src="zoulez_sangare_mami_yogo.mp3"></button></td></tr>
+<tr><td>21</td><td>2007</td><td>Tradi Moderne</td><td>Zouley Sangare - Suru</td><td>Enregistrement & Edition</td><td><button class="play-btn" data-src="zouley_sangare_suru.mp3"></button></td></tr>
+<tr><td>22</td><td>2007</td><td>Tradi Moderne</td><td>Zouley Sangare - Sombourou</td><td>Enregistrement & Edition</td><td><button class="play-btn" data-src="zoulez_sangare_sombourou.mp3"></button></td></tr>
+<tr><td>23</td><td>2007</td><td>Tradi Moderne</td><td>Zouley Sangare - Gnidagbe</td><td>Enregistrement & Edition</td><td><button class="play-btn" data-src="zoulez_sangare_gnidagbe.mp3"></button></td></tr>
 </table>
 
 <!-- Lecteur global -->
@@ -335,16 +79,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const songTitle = document.getElementById("song-title");
   const songInfo = document.getElementById("song-info");
   const closeBtn = document.getElementById("close-player");
-  let currentBtn = null;
 
   playButtons.forEach(btn => {
     btn.addEventListener("click", function(e) {
       e.stopPropagation();
-
-      if (currentBtn) currentBtn.classList.remove("playing"); // enlever le style précédent
-      currentBtn = btn;
-      currentBtn.classList.add("playing");
-
       const row = btn.closest("tr");
       const title = row.cells[3].innerText;
       const info = row.cells[4].innerText;
@@ -361,12 +99,10 @@ document.addEventListener("DOMContentLoaded", function () {
   closeBtn.addEventListener("click", function(){
     mainAudio.pause();
     player.style.display = "none";
-    if (currentBtn) currentBtn.classList.remove("playing");
   });
 
   mainAudio.addEventListener("ended", function () {
     player.style.display = "none";
-    if (currentBtn) currentBtn.classList.remove("playing");
   });
 });
 </script>
