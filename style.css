@@ -11,11 +11,17 @@ body {
     background-image: url('landing.jpg');
     background-repeat: no-repeat;
     background-size: cover;          /* Remplit tout l'écran */
-    background-position: center center;
+    background-position: top center;
     background-attachment: fixed;    /* Parallaxe sur desktop */
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (min-width: 1024px) {
+  .landing-hero {
+    background-size: contain; /* toute l'image visible */
+    background-position: top center; /* la tête reste visible */
+  }
+}
 }
 
 /* Conteneur de contenu */
@@ -97,6 +103,7 @@ body {
         font-size: 1rem;
     }
 }
+
 
 
 
