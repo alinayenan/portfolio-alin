@@ -3,19 +3,15 @@
 <html lang="fr">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F0RNN2HZN4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F0RNN2HZN4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-F0RNN2HZN4');
-</script>
+    gtag('config', 'G-F0RNN2HZN4');
+  </script>
   <meta charset="UTF-8">
-     <!-- Bande d'accueil univers Alain -->
-<div style="background-color:#e6f0fa; color :white; padding:20px 30px; text-align:center; border-bottom: 4px solid #0066cc:">
-  <h2 style="margin:0; font-size:19px;">🎙️ Welcome to the world of the self-taught sound technician / Bienvenue dans l’univers du technicien du son autodidacte Alain Ayenan</h2>
-</div>
   <title>Styles musicaux travaillés</title>
   <style>
     body {
@@ -30,82 +26,68 @@
       margin-bottom: 30px;
     }
     /* Style général du tableau */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: auto; /* largeur automatique selon contenu */
-}
-
-/* Style des cellules */
-th, td {
-    padding: 8px 12px;
-    text-align: center;
-    border: 1px solid #ccc;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-/* Observation : colonne adaptative mais max 200px */
-th:nth-child(5), td:nth-child(5) { 
-    max-width: 200px; 
-}
-
-/* Lecture : colonne toujours large pour le bouton Play */
-th:nth-child(6), td:nth-child(6) { 
-    width: 120px;  
-    text-align: center;
-}
-
-/* Style du bouton Play */
-.play-btn {
-    display: inline-block;
-    width: 100%;
-    padding: 6px 0;
-    text-align: center;
-    cursor: pointer;
-}
-
-/* Tableau responsive pour mobile */
-@media (max-width: 768px) {
     table {
-        display: block;
-        overflow-x: auto; /* scroll horizontal si trop large */
-        white-space: nowrap;
-    }
-
-    th, td {
-        padding: 6px 10px;
-    }
-
-    /* Observation plus étroite sur mobile */
-    th:nth-child(5), td:nth-child(5) { 
-        max-width: 150px; 
-    }
-
-    /* Lecture reste suffisamment large pour le bouton Play */
-    th:nth-child(6), td:nth-child(6) { 
-        width: 100px;
-    }
-}
       width: 100%;
       border-collapse: collapse;
+      table-layout: auto;
       background-color: white;
     }
     th, td {
       padding: 12px;
       border: 1px solid #ccc;
       text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
     tr:nth-child(even) {
       background-color: #f0f8ff;
     }
-    audio {
-      width: 100%;
+    /* Observation : colonne adaptative mais max 200px */
+    th:nth-child(5), td:nth-child(5) { 
+        max-width: 200px; 
+    }
+    /* Lecture : colonne pour le bouton Play */
+    th:nth-child(6), td:nth-child(6) { 
+        width: 120px;  
+        text-align: center;
+    }
+    /* Bouton Play */
+    .play-btn {
+        display: inline-block;
+        width: 100%;
+        padding: 6px 0;
+        text-align: center;
+        cursor: pointer;
+    }
+    /* Tableau responsive pour mobile */
+    @media (max-width: 768px) {
+        table {
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        th, td {
+            padding: 6px 10px;
+        }
+        th:nth-child(5), td:nth-child(5) { 
+            max-width: 150px; 
+        }
+        th:nth-child(6), td:nth-child(6) { 
+            width: 100px;
+        }
+    }
+    /* Cacher tous les lecteurs du tableau */
+    table audio {
+      display: none;
     }
   </style>
 </head>
 <body>
+
+<div style="background-color:#e6f0fa; color:white; padding:20px 30px; text-align:center; border-bottom: 4px solid #0066cc;">
+  <h2 style="margin:0; font-size:19px;">🎙️ Welcome to the world of the self-taught sound technician / Bienvenue dans l’univers du technicien du son autodidacte Alain Ayenan</h2>
+</div>
 
 <h2>🎧 Listen / Écoute – Styles musicaux travaillés par Alain Ayenan</h2>
 <p style="font-style: italic; font-size: 14px; color: #555; margin-bottom: 12px;">
@@ -120,17 +102,16 @@ th:nth-child(6), td:nth-child(6) {
     <th>Artiste & Titre</th>
     <th>Observation</th>
     <th>Lecture</th>
-   </tr>
+  </tr>
   <tr>
     <td>01</td>
     <td>2025</td>
     <td>Tradi-Moderne</td>
     <td>Theodule Dossou - Children Of Destiny</td>
     <td>Enregistrement & Mixage & Mastering</td>
-    <td><audio controls controlsList="nodownload"><source src="theodule_dossou_children_of_destiny.mp3" type="audio/mpeg">Non supporté</audio></td> 
+    <td><audio controls controlsList="nodownload"><source src="theodule_dossou_children_of_destiny.mp3" type="audio/mpeg"></audio></td> 
   </tr>
-  <tr>
-    <td>02</td>
+   <td>02</td>
     <td>2025</td>
     <td>Gospel</td>
     <td>Hospice Gerard - hɛn lìn</td>
@@ -305,28 +286,26 @@ th:nth-child(6), td:nth-child(6) {
     <td>Enregistrement & Edition</td>
     <td><audio controls controlsList="nodownload"><source src="zoulez_sangare_gnidagbe.mp3" type="audio/mpeg">Non supporté</audio></td>
    </tr>
+  <!-- ajoute le reste de tes lignes de tableau ici comme dans ton code original -->
 </table>
 
-  <!-- Lecteur global personnalisé -->
+<!-- Lecteur global personnalisé -->
 <div id="custom-player" style="display:none; position:fixed; bottom:20px; left:50%; transform:translateX(-50%);
   background:#fff; border:2px solid #0066cc; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.2);
   width:90%; max-width:600px; padding:15px; z-index:1000;">
 
   <div style="display:flex; align-items:center; gap:15px;">
-    <!-- Photo -->
     <img src="playphoto.jpg" alt="images" style="width:80px; height:80px; border-radius:50%; object-fit:cover;">
-
-    <!-- Infos chanson -->
     <div style="flex:1;">
       <h3 id="song-title" style="margin:0; font-size:18px; color:#005bb5;">Titre en cours</h3>
       <p id="song-info" style="margin:4px 0; font-size:14px; color:#333;">Infos...</p>
-
-      <!-- Audio global -->
       <audio id="main-audio" controls style="width:100%;">
         <source src="" type="audio/mpeg">
         Votre navigateur ne supporte pas l’audio.
       </audio>
     </div>
+    <!-- Bouton de fermeture -->
+    <button id="close-player" style="background:#0066cc; color:white; border:none; padding:8px 12px; border-radius:6px; cursor:pointer; font-weight:bold;">✖️</button>
   </div>
 </div>
 
@@ -337,40 +316,47 @@ document.addEventListener("DOMContentLoaded", function () {
   const mainAudio = document.getElementById("main-audio");
   const songTitle = document.getElementById("song-title");
   const songInfo = document.getElementById("song-info");
+  const closeBtn = document.getElementById("close-player");
 
   rows.forEach(row => {
     const audio = row.querySelector("audio");
     if (audio) {
-      audio.addEventListener("play", function () {
-        // Pause les autres lecteurs du tableau
+      row.addEventListener("click", function () {
+        // Pause les autres lecteurs
         document.querySelectorAll("table audio").forEach(a => { if (a !== audio) a.pause(); });
 
-        // Récupère les infos
+        // Récupère infos
         const title = row.cells[3].innerText;  
         const info = row.cells[4].innerText;  
 
-        // Mets à jour le lecteur global
+        // Mets à jour lecteur global
         songTitle.textContent = title;
         songInfo.textContent = info;
         mainAudio.src = audio.querySelector("source").src;
         mainAudio.play();
 
-        // Affiche le lecteur global
+        // Affiche lecteur global
         player.style.display = "block";
       });
     }
   });
 
-  // Quand la musique du lecteur global s’arrête → cacher
+  // Bouton de fermeture manuel
+  closeBtn.addEventListener("click", function(){
+    mainAudio.pause();
+    player.style.display = "none";
+  });
+
+  // Quand la musique s’arrête → cacher
   mainAudio.addEventListener("ended", function () {
     player.style.display = "none";
   });
 });
 </script>
-  
-</body>
-  
- <!-- Bouton retour -->
+
+<!-- Bouton retour -->
 <div style="text-align:right; padding:10px 30px;">
   <a href="site.html" style="background-color:#0066cc; color:white; padding:10px 16px; border-radius:6px; text-decoration:none; font-weight:bold;">⬅️ Retour à l’accueil</a>
 </div>
+
+
