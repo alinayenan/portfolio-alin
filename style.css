@@ -22,7 +22,6 @@ body {
     background-position: top center; /* la tête reste visible */
   }
 }
-}
 
 /* Conteneur de contenu */
 .container {
@@ -103,6 +102,7 @@ body {
         font-size: 1rem;
     }
 }
+
 
 
 
