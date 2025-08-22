@@ -90,7 +90,13 @@
   });
 </script>
  <!-- Bouton retour -->
-<div style="text-align:right; padding:10px 30px;">
+<div style="text-align:right; padding:10px 30px #btnMainPage {
+    position: fixed;   /* Toujours fixé */
+    bottom: 20px;      /* 20px au-dessus du bas de l’écran */
+    right: 20px;       /* 20px à gauche du bord droit */
+    z-index: 1000;     /* Passe au-dessus des images et du contenu */
+}
+;">
   <a href="site.html" style="background-color:#0066cc; color:white; padding:10px 16px; border-radius:6px; text-decoration:none; font-weight:bold;">⬅️ Main Page</a>
 </div>
 
