@@ -52,7 +52,7 @@ body {
     color: #000;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 15px;
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     position: relative;
@@ -102,6 +102,7 @@ body {
         font-size: 1rem;
     }
 }
+
 
 
 
