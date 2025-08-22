@@ -589,8 +589,26 @@
     window.location.href = "index.html"; // ← remplace par le nom exact que tu vas me donner
   });
 </script>
- <!-- Bouton retour -->
-<div style="text-align:right; padding:10px 30px;">
-
-  <a href="site.html" style="background-color:#0066cc; color:white; padding:10px 16px; border-radius:6px; text-decoration:none; font-weight:bold">⬅️ Main Page</a>
-</div>
+ <!-- Bouton Main page (à droite) -->
+<button id="btnMainPage" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff6600; /* couleur différente pour le reconnaître */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000;
+">
+   ⬅️ Main page
+</button>
+  
+  <script>
+  // Bouton Main page (à droite)
+  document.getElementById('btnMainPage').addEventListener('click', function() {
+    window.location.href = "site.html"; // redirige vers la page d'accueil (index)
+  });
+ </script>
