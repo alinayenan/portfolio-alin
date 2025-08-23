@@ -108,14 +108,14 @@ body {
   position: fixed;
   top: 20px;
   right: 20px;
-  font-size: 22px;
+  font-size: 28px;
   cursor: pointer;
   z-index: 1001;
 
   background: #ff6600;   /* couleur du cercle (orange vif) */
   color: white;          /* couleur de l’icône ☰ */
-  width: 45px;
-  height: 45px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;    /* cercle parfait */
   display: flex;
   align-items: center;
@@ -172,6 +172,12 @@ body {
 
 .side-menu a:hover {
   color: #ffd700; /* doré au survol */
+}
+
+@media (max-width: 768px) {
+  .side-menu {
+    width: 80%; /* prend seulement 80% de l’écran sur mobile */
+  }
 }
 
 
