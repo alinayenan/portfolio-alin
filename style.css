@@ -108,26 +108,26 @@ body {
   position: fixed;
   top: 20px;
   right: 20px;
-  font-size: 28px;
+  font-size: 28px;   /* taille de l’icône ☰ */
   cursor: pointer;
   z-index: 1001;
 
-  background: #ff6600;   /* couleur du cercle (orange vif) */
-  color: white;          /* couleur de l’icône ☰ */
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;    /* cercle parfait */
+  background: #ff6600; /* couleur du cercle */
+  color: white;        /* couleur de l’icône ☰ */
+  width: 60px;         /* ← augmente la taille ici */
+  height: 60px;        /* ← et ici */
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
   transition: 0.3s;
+  user-select: none;
 }
 
-/* Effet au survol */
 .menu-btn:hover {
-  background: #cc5200; /* orange foncé */
-  transform: scale(1.1); /* petit zoom */
+  background: #cc5200;
+  transform: scale(1.08);
 }
 
 /* Panneau latéral */
@@ -135,28 +135,27 @@ body {
   position: fixed;
   top: 0;
   right: -300px; /* caché par défaut */
-  width: 300px;
+  width: 300px;  /* desktop */
   height: 100%;
-  background: url("menuphoto.jpg") no-repeat center/cover;
-  transition: 0.4s;
+  background: url("ta-photo.jpg") no-repeat center/cover; /* ← remplace par ton image */
+  transition: right 0.4s ease;
   z-index: 1000;
   padding: 60px 20px;
   box-shadow: -2px 0 10px rgba(0,0,0,0.5);
 }
 
-/* Quand actif, il sort vers la gauche */
-.side-menu.active {
-  right: 0;
-}
+.side-menu.active { right: 0; }
 
-/* Bouton fermer */
+/* Bouton fermer (en haut à droite du panneau) */
 .close-btn {
   position: absolute;
   top: 15px;
   right: 20px;
-  font-size: 25px;
+  font-size: 28px;
   cursor: pointer;
   color: white;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+  user-select: none;
 }
 
 /* Liens du menu */
@@ -169,16 +168,23 @@ body {
   font-weight: bold;
   text-shadow: 1px 1px 3px black;
 }
+.side-menu a:hover { color: #ffd700; }
 
-.side-menu a:hover {
-  color: #ffd700; /* doré au survol */
+/* ✅ Mobile : rendre le panneau plus étroit pour qu’on voie bien ton texte derrière */
+@media (max-width: 768px) {
+  .side-menu { width: 70vw; }   /* 70% de la largeur écran */
 }
+@media (max-width: 480px) {
+  .side-menu { width: 65vw; }   /* encore un peu plus étroit sur très petit écran */
+}
+
 
 @media (max-width: 768px) {
   .side-menu {
     width: 80%; /* prend seulement 80% de l’écran sur mobile */
   }
 }
+
 
 
 
