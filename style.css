@@ -185,6 +185,10 @@ body {
   }
 }
 
+footer {
+  background: transparent;
+  border-top: 3px solid #0066cc;
+}
 
 
 
