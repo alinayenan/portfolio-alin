@@ -137,7 +137,7 @@ body {
   right: -300px; /* caché par défaut */
   width: 300px;  /* desktop */
   height: 100%;
-  background: url("ta-photo.jpg") no-repeat center/cover; /* ← remplace par ton image */
+  background: url("menuphoto.jpg") no-repeat center/cover; /* ← remplace par ton image */
   transition: right 0.4s ease;
   z-index: 1000;
   padding: 60px 20px;
@@ -184,6 +184,7 @@ body {
     width: 80%; /* prend seulement 80% de l’écran sur mobile */
   }
 }
+
 
 
 
