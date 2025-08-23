@@ -149,7 +149,7 @@ body {
 /* Bouton fermer (en haut à droite du panneau) */
 .close-btn {
   position: absolute;
-  top: 600px;
+  top: 500px;
   right: 20px;
   font-size: 28px;
   cursor: pointer;
@@ -198,6 +198,7 @@ body {
   z-index: 1000;         /* au-dessus de tout */
   font-family: Arial, sans-serif; /* police */
 }
+
 
 
 
