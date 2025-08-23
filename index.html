@@ -27,8 +27,18 @@
       <a href="site.html" class="btn">Click here / Cliquez ici</a>
     </div>
   
+  <script>
+  const menuBtn = document.querySelector('.menu-btn');
+  const sideMenu = document.getElementById('menu');
+  const closeBtn = document.getElementById('close');
+
+  menuBtn.onclick = () => sideMenu.classList.add('active');
+  closeBtn.onclick = () => sideMenu.classList.remove('active');
+</script>
+
 </body>
 </html>
+
 
 
 
