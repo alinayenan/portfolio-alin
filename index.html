@@ -27,39 +27,59 @@
       <a href="site.html" class="btn">Click here / Cliquez ici</a>
     </div>
   
-  <!-- Bouton menu -->
-<div class="menu-btn">☰</div>
+<!-- Bouton menu -->
+<div class="menu-btn" aria-label="Ouvrir le menu" role="button">☰</div>
 
 <!-- Menu coulissant -->
-<div class="side-menu" id="menu">
-  <span class="close-btn" id="close">&times;</span>
+<div class="side-menu" id="menu" aria-hidden="true">
+  <span class="close-btn" id="close" aria-label="Fermer">&times;</span>
   <a href="styles_audio.html">Lien 1</a>
   <a href="galerie.html">Lien 2</a>
   <a href="contact.html">Lien 3</a>
 </div>
 
-  <script>
-  const menuBtn = document.querySelector('.menu-btn');
+<script>
+  const menuBtn  = document.querySelector('.menu-btn');
   const sideMenu = document.getElementById('menu');
   const closeBtn = document.getElementById('close');
 
-  // Ouvre le menu
-  menuBtn.onclick = () => sideMenu.classList.add('active');
-
-  // Ferme le menu avec le bouton ×
-  closeBtn.onclick = () => sideMenu.classList.remove('active');
-
-  // Ferme le menu si on clique en dehors
-  window.onclick = function(event) {
-    if(event.target === sideMenu) return; // clique sur le menu = rien
-    if(sideMenu.classList.contains('active')) {
-      sideMenu.classList.remove('active');
-    }
+  function openMenu() {
+    sideMenu.classList.add('active');
+    sideMenu.setAttribute('aria-hidden', 'false');
   }
+  function closeMenu() {
+    sideMenu.classList.remove('active');
+    sideMenu.setAttribute('aria-hidden', 'true');
+  }
+
+  // Ouvrir/fermer via les boutons
+  menuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();  // évite la fermeture immédiate
+    openMenu();
+  });
+  closeBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    closeMenu();
+  });
+
+  // Fermer si on clique en dehors du menu (sans bug)
+  document.addEventListener('click', (e) => {
+    const clickDansMenu = sideMenu.contains(e.target);
+    const clickSurBouton = menuBtn.contains(e.target);
+    if (sideMenu.classList.contains('active') && !clickDansMenu && !clickSurBouton) {
+      closeMenu();
+    }
+  });
+
+  // Bonus: Échap pour fermer
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
 </script>
 
 </body>
 </html>
+
 
 
 
