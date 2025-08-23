@@ -132,7 +132,7 @@ body {
 
 /* Panneau latéral */
 .side-menu {
-  padding: 200px 20px 20px 20px;
+  padding: 100px 20px 20px 20px;
     position: fixed;
   top: 0;
   right: -300px; /* caché par défaut */
@@ -141,8 +141,7 @@ body {
   background: url("menuphoto.jpg") no-repeat center/cover; /* ← remplace par ton image */
   transition: right 0.4s ease;
   z-index: 1000;
-  padding: 60px 20px;
-  box-shadow: -2px 0 10px rgba(0,0,0,0.5);
+   box-shadow: -2px 0 10px rgba(0,0,0,0.5);
 }
 
 .side-menu.active { right: 0; }
@@ -185,6 +184,7 @@ body {
     width: 80%; /* prend seulement 80% de l’écran sur mobile */
   }
 }
+
 
 
 
