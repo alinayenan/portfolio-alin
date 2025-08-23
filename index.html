@@ -43,12 +43,24 @@
   const sideMenu = document.getElementById('menu');
   const closeBtn = document.getElementById('close');
 
+  // Ouvre le menu
   menuBtn.onclick = () => sideMenu.classList.add('active');
+
+  // Ferme le menu avec le bouton ×
   closeBtn.onclick = () => sideMenu.classList.remove('active');
+
+  // Ferme le menu si on clique en dehors
+  window.onclick = function(event) {
+    if(event.target === sideMenu) return; // clique sur le menu = rien
+    if(sideMenu.classList.contains('active')) {
+      sideMenu.classList.remove('active');
+    }
+  }
 </script>
 
 </body>
 </html>
+
 
 
 
