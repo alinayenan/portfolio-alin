@@ -103,6 +103,77 @@ body {
     }
 }
 
+/* Bouton menu en haut à droite (style moderne cercle orange) */
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 1001;
+
+  background: #ff6600;   /* couleur du cercle (orange vif) */
+  color: white;          /* couleur de l’icône ☰ */
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;    /* cercle parfait */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+/* Effet au survol */
+.menu-btn:hover {
+  background: #cc5200; /* orange foncé */
+  transform: scale(1.1); /* petit zoom */
+}
+
+/* Panneau latéral */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -300px; /* caché par défaut */
+  width: 300px;
+  height: 100%;
+  background: url("ta-photo.jpg") no-repeat center/cover;
+  transition: 0.4s;
+  z-index: 1000;
+  padding: 60px 20px;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.5);
+}
+
+/* Quand actif, il sort vers la gauche */
+.side-menu.active {
+  right: 0;
+}
+
+/* Bouton fermer */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Liens du menu */
+.side-menu a {
+  display: block;
+  margin: 30px 0;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px black;
+}
+
+.side-menu a:hover {
+  color: #ffd700; /* doré au survol */
+}
+
 
 
 
