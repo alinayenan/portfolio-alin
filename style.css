@@ -137,7 +137,7 @@ body {
   right: -300px; /* caché par défaut */
   width: 300px;
   height: 100%;
-  background: url("ta-photo.jpg") no-repeat center/cover;
+  background: url("menuphoto.jpg") no-repeat center/cover;
   transition: 0.4s;
   z-index: 1000;
   padding: 60px 20px;
@@ -173,6 +173,7 @@ body {
 .side-menu a:hover {
   color: #ffd700; /* doré au survol */
 }
+
 
 
 
