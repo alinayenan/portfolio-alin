@@ -186,9 +186,11 @@ body {
 }
 
 footer {
-  background: transparent;
+  top: 100px
+    background: transparent;
   border-top: 3px solid #0066cc;
 }
+
 
 
 
