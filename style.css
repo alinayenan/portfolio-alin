@@ -205,13 +205,15 @@ body {
   left: 0;               /* commence à gauche */
   width: 100%;           /* prend toute la largeur */
   text-align: center;    /* centré horizontalement */
-  background: rgba(0,0,0,0.6); /* fond semi-transparent, optionnel */
+  background: linear-gradient(90deg, #0d6efd, #6f42c1);
+); /* fond semi-transparent, optionnel */
   color: white;          /* couleur du texte */
   font-size: 14px;       /* taille du texte */
   padding: 10px 0;       /* un peu d'espace en haut et en bas */
   z-index: 1000;         /* au-dessus de tout */
   font-family: Arial, sans-serif; /* police */
 }
+
 
 
 
