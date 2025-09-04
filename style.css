@@ -8,7 +8,7 @@ html, body {
 
 /* Image de fond */
 body {
-    background-image: url('homepage.jpg');
+    background-image: url('homepage.png');
     background-repeat: no-repeat;
     background-size: cover;          /* Remplit tout l'écran */
     background-position: top center;
@@ -213,6 +213,7 @@ body {
   z-index: 1000;         /* au-dessus de tout */
   font-family: Arial, sans-serif; /* police */
 }
+
 
 
 
