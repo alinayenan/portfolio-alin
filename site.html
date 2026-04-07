@@ -261,14 +261,18 @@ footer {
       background: linear-gradient(to right, #004080, #00264d);
     }
 /* Effet survol pour les encadrés audio et galerie */
-.audio-box:hover, .gallery-box:hover {
+.styles_live-box:hover,.audio-box:hover, .gallery-box:hover {
   transform: scale(1.15) rotate(-1deg); /* Agrandissement et légère rotation */
   box-shadow: 0 20px 40px rgba(0,0,0,0.35); /* Ombre plus prononcée */
   transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
 }
 
 /* Changement subtil de couleur de fond au survol */
-.audio-box:hover {
+.styles_live-box:hover {
+  background: linear-gradient(to bottom, #2b81c6, #0f3d73);
+}
+    
+    .audio-box:hover {
   background: linear-gradient(to bottom, #2b81c6, #0f3d73);
 }
 
@@ -334,8 +338,8 @@ footer {
     <li>🎤 Concert Cœur à Cœur – Sessime, Nikanort</li>
   </ul>
 </div>
-    <div class="box audio-box">
-      <a href="styles_audio.html">🎼 Listen styles_live</a>
+    <div class="box styles_live-box">
+      <a href="styles_live.html">🎼 Listen Audio live</a>
       <div class="explanation">Écoute les audios de concerts lives travaillé par Alain</div>
     </div>
   </div>
