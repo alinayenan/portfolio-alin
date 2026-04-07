@@ -17,25 +17,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-}
-    .section {
-  background: transparent; /* garde le fond bleu ciel clair */
-}
-
-.box {
-  background: rgba(255,255,255,0.85); /* semi-transparence si tu veux garder effet encadré */
-}
-
-.contact {
-  background: transparent; /* bleu ciel clair en fond */
-  border: 2px solid #0066cc;
-}
-
-footer {
-  background: transparent;
-  border-top: 3px solid #0066cc;
-}
-
     body {
       font-family: 'Roboto', sans-serif;
       background: linear-gradient(to bottom, #e6f0fa, #f0f8ff);
@@ -146,7 +127,7 @@ footer {
       width: calc(100% - 340px);
     }
 
-    /* ----------------------- Encadrés Modernes ----------------------- */
+    /* Encadrés Modernes */
     .box {
       width: 220px;
       height: 150px;
@@ -188,14 +169,9 @@ footer {
       color: #333;
     }
 
-    /* Couleurs spécifiques */
     .styles_live-box {
       background: linear-gradient(to bottom, #4aa3df, #1f618d);
       border: 2px solid #003366;
-      color: #fff;
-    }
-
-    .styles_live-box a {
       color: #fff;
     }
     
@@ -205,13 +181,14 @@ footer {
       color: #fff;
     }
 
-    .audio-box a {
-      color: #fff;
-    }
-
     .gallery-box {
       background: linear-gradient(to bottom, #fff3e0, #ffd699);
       border: 2px solid #e65100;
+    }
+
+    .styles_live-box a,
+    .audio-box a {
+      color: #fff;
     }
 
     .gallery-box a {
@@ -219,7 +196,6 @@ footer {
       font-weight: bold;
     }
 
-    /* ----------------------- Contact / Footer ----------------------- */
     .contact {
       background: linear-gradient(to right, #e6f4ff, #cce6ff);
       border-radius: 12px;
@@ -239,7 +215,6 @@ footer {
       border-top: 3px solid #0066cc;
     }
 
-    /* ----------------------- Bouton Top ----------------------- */
     #topBtn {
       display: none;
       position: fixed;
@@ -260,27 +235,24 @@ footer {
     #topBtn:hover {
       background: linear-gradient(to right, #004080, #00264d);
     }
-/* Effet survol pour les encadrés audio et galerie */
-.styles_live-box:hover,.audio-box:hover, .gallery-box:hover {
-  transform: scale(1.15) rotate(-1deg); /* Agrandissement et légère rotation */
-  box-shadow: 0 20px 40px rgba(0,0,0,0.35); /* Ombre plus prononcée */
-  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
-}
 
-/* Changement subtil de couleur de fond au survol */
-.styles_live-box:hover {
-  background: linear-gradient(to bottom, #2b81c6, #0f3d73);
-}
-    
+    .styles_live-box:hover,
+    .audio-box:hover,
+    .gallery-box:hover {
+      transform: scale(1.15) rotate(-1deg);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+      transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    }
+
+    .styles_live-box:hover,
     .audio-box:hover {
-  background: linear-gradient(to bottom, #2b81c6, #0f3d73);
-}
+      background: linear-gradient(to bottom, #2b81c6, #0f3d73);
+    }
 
-.gallery-box:hover {
-  background: linear-gradient(to bottom, #ffd699, #ffb84d);
-}
+    .gallery-box:hover {
+      background: linear-gradient(to bottom, #ffd699, #ffb84d);
+    }
 
-    /* ----------------------- Responsive ----------------------- */
     @media (max-width: 600px) {
       .box {
         width: 100%;
@@ -330,20 +302,15 @@ footer {
     <li>🔊 Installation de systèmes audio professionnels</li>
   </ul>
 
-   <h2>Live Shows & Events / Concerts Live & Événements</h2>
+  <h2>Live Shows & Events / Concerts Live & Événements</h2>
   <ul>
     <li>🎤 Festival Biennale de Ouidah – Bonbon Vodou, Erol Josué, Koudy Fagbemi...</li>
     <li>🎤 Concert Hommage à Boncana Maiga – Aïcha Koné, Sekoumba Bambino...</li>
     <li>🎤 Festival Wémèhwé – Sagbohan Danialou, Zenab Abib, Ricos Campos</li>
     <li>🎤 Concert Cœur à Cœur – Sessime, Nikanort</li>
   </ul>
-</div>
-    <div class="box styles_live-box">
-      <a href="styles_live.html">🎼 Listen Audio live</a>
-      <div class="explanation">Écoute les audios de concerts lives travaillé par Alain</div>
-    </div>
-  </div>
-  
+
+  <!-- Conteneur flex pour projets et encadrés -->
   <h2>Studio Works / Réalisations Studio</h2>
   <div class="content-flex">
     <div class="left-col">
@@ -361,42 +328,37 @@ footer {
         <li>Seul – Zouley SANGARE</li>
       </ul>
     </div>
-    <div class="box audio-box">
-      <a href="styles_audio.html">🎼 Listen Audio Styles</a>
-      <div class="explanation">Écoute les styles du son musical travaillé par Alain</div>
-    </div>
-  </div>
 
-    <h2>Portfolio / Portfolio</h2>
-  <div class="content-flex">
-    <div class="left-col">
-      <ul>
-        <li><a href="https://youtu.be/1vK5WYijmLE?si=-81DFpX7ssDORqyk" target="_blank">Audio – Okpê (Ayodélé)</a></li>
-        <li><a href="https://youtu.be/xXAH_J2qljI?si=Hp_Lkub4iEw41ZSL" target="_blank">Clip – Hongan (Don Metok)</a></li>
-        <li><a href="https://youtu.be/3rwLe9ujURU?si=WDMNWanX8e1G0A9S" target="_blank">Clip – Enfant (Roselyne OLORY)</a></li>
-        <li><a href="https://youtu.be/7yYAzxOoye0?si=O21NDEivGousR2Yi" target="_blank">Clip – Nam'ablo (Almok)</a></li>
-        <li><a href="https://youtu.be/6u2yWhfdIa8?si=yCaviSXhsXyjIWgA" target="_blank">Clip – Ton Amour (Frère Theodule Dossou)</a></li>
-        <li><a href="https://youtu.be/niN0h-AcpnQ?si=rq5VLEWAq0IArFtD" target="_blank">Clip – Ahelou (Roselyne OLORY)</a></li>
-        <li><a href="https://www.facebook.com/share/v/1CVFSmcDor/" target="_blank">Reportage Amateur concert coeur à coeur</a></li>
-        <li><a href="https://www.facebook.com/share/v/18FQZL3Vec/" target="_blank">Reportage – ORTB (Hommage Boncana Maiga)</a></li>
-        <li><a href="https://www.facebook.com/share/p/19RffViWCt/" target="_blank">Publication facebook – Bonbon Vodou</a></li>
-        <li><a href="https://www.facebook.com/share/v/17ckxy5MSZ/" target="_blank">Prestation – Erol Josué</a></li>
-        <li><a href="https://www.facebook.com/share/v/15YnUrgfQ6/" target="_blank">Prestation – Koudy Fagbemi</a></li>
-      </ul>
-    </div>
-    <div class="box gallery-box">
-      <a href="galerie.html">📷 Photo Gallery</a>
-      <div class="explanation">Galerie photos de Alain</div>
-       </div>
-  </div>
-</div>
+    <!-- Colonne droite avec les 3 encadrés -->
+    <div style="display: flex; flex-direction: column; gap: 20px;">
 
-  <!-- Bouton Ledin à gauche, couleur bleu roi -->
+      <div class="box styles_live-box">
+        <a href="styles_live.html">🎼 Listen Audio live</a>
+        <div class="explanation">Écoute les audios de concerts lives travaillé par Alain</div>
+      </div>
+
+      <div class="box audio-box">
+        <a href="styles_audio.html">🎼 Listen Audio Styles</a>
+        <div class="explanation">Écoute les styles du son musical travaillé par Alain</div>
+      </div>
+
+      <div class="box gallery-box">
+        <a href="galerie.html">📷 Photo Gallery</a>
+        <div class="explanation">Galerie photos de Alain</div>
+      </div>
+
+    </div> <!-- fin colonne droite -->
+
+  </div> <!-- fin content-flex -->
+
+</div> <!-- fin section -->
+
+<!-- Bouton Home -->
 <button id="btnHome page" style="
     position: fixed;
     bottom: 20px;
     left: 20px;
-    background-color: #005bb5; /* bleu roi concentré */
+    background-color: #005bb5;
     color: white;
     border: none;
     border-radius: 8px;
@@ -410,22 +372,9 @@ footer {
 
 <script>
   document.getElementById('btnHome page').addEventListener('click', function() {
-    window.location.href = "index.html"; // ← remplace par le nom exact que tu vas me donner
+    window.location.href = "index.html";
   });
-</script>
-<button onclick="topFunction()" id="topBtn" title="Retour en haut">⬆️</button>
 
-<div class="contact">
-  📧 Email : alinayena@gmail.com<br />
-  📞 Téléphone : (00229) 0195082041 / 0165648655
-</div>
-<p>📌 Retrouvez tous mes liens ici : <a href="https://linktr.ee/alainayenan" target="_blank" rel="noopener noreferrer">linktr.ee/alainayenan</a></p>
-
-<footer>
-  © 2025 Alain Ayenan – Tous droits réservés
-</footer>
-
-<script>
   let topBtn = document.getElementById("topBtn");
   window.onscroll = function() {
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
@@ -438,6 +387,18 @@ footer {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
+
+<button onclick="topFunction()" id="topBtn" title="Retour en haut">⬆️</button>
+
+<div class="contact">
+  📧 Email : alinayena@gmail.com<br />
+  📞 Téléphone : (00229) 0195082041 / 0165648655
+</div>
+<p>📌 Retrouvez tous mes liens ici : <a href="https://linktr.ee/alainayenan" target="_blank" rel="noopener noreferrer">linktr.ee/alainayenan</a></p>
+
+<footer>
+  © 2025 Alain Ayenan – Tous droits réservés
+</footer>
 
 </body>
 </html>
