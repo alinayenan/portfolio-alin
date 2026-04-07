@@ -19,15 +19,15 @@
   <style>
 }
     .section {
-  background: transparent;
+  background: transparent; /* garde le fond bleu ciel clair */
 }
 
 .box {
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.85); /* semi-transparence si tu veux garder effet encadré */
 }
 
 .contact {
-  background: transparent;
+  background: transparent; /* bleu ciel clair en fond */
   border: 2px solid #0066cc;
 }
 
@@ -51,6 +51,7 @@ footer {
       font-size: 22px;
       font-weight: bold;
       color: #fff;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
     }
 
     .header {
@@ -66,6 +67,13 @@ footer {
       width: 140px;
       height: 140px;
       border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .header img:hover {
+      transform: scale(1.05);
     }
 
     .center-title {
@@ -77,11 +85,14 @@ footer {
       font-size: 38px;
       font-weight: bold;
       color: #004080;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     }
 
     .subtitle {
       font-size: 22px;
       color: #333;
+      line-height: 1.6;
     }
 
     .btn-contact {
@@ -92,21 +103,42 @@ footer {
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      display: inline-block;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: all 0.3s;
+    }
+
+    .btn-contact:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to right, #004080, #00264d);
     }
 
     .section {
       padding: 40px 60px;
+      animation: fadeInUp 0.8s ease forwards;
     }
 
     h2 {
       color: #0066cc;
       border-bottom: 3px solid #0066cc;
       padding-bottom: 8px;
+      margin-bottom: 20px;
+      font-size: 26px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      font-size: 18px;
     }
 
     .content-flex {
       display: flex;
       justify-content: space-between;
+      align-items: flex-start;
       flex-wrap: wrap;
     }
 
@@ -114,6 +146,7 @@ footer {
       width: calc(100% - 340px);
     }
 
+    /* ----------------------- Encadrés Modernes ----------------------- */
     .box {
       width: 220px;
       height: 150px;
@@ -123,20 +156,42 @@ footer {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      background: linear-gradient(145deg, #ffffff, #f0f8ff);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transition: all 0.4s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s forwards;
+    }
+
+    .box:hover {
+      transform: translateY(-5px) scale(1.07);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .box a {
       font-weight: bold;
       font-size: 28px;
       text-decoration: none;
+      margin-bottom: 12px;
     }
 
     .explanation {
       font-size: 16px;
+      color: #333;
     }
 
+    /* Couleurs spécifiques */
     .audio-box {
       background: linear-gradient(to bottom, #4aa3df, #1f618d);
+      border: 2px solid #003366;
       color: #fff;
     }
 
@@ -146,38 +201,121 @@ footer {
 
     .gallery-box {
       background: linear-gradient(to bottom, #fff3e0, #ffd699);
+      border: 2px solid #e65100;
     }
 
     .gallery-box a {
       color: #e65100;
+      font-weight: bold;
     }
 
+    /* ----------------------- Contact / Footer ----------------------- */
+    .contact {
+      background: linear-gradient(to right, #e6f4ff, #cce6ff);
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 30px;
+      margin-bottom: 25px;
+      text-align: center;
+      font-size: 17px;
+    }
+
+    footer {
+      background: linear-gradient(to right, #f0f4ff, #d0e7ff);
+      text-align: center;
+      padding: 25px;
+      font-size: 15px;
+      color: #555;
+      border-top: 3px solid #0066cc;
+    }
+
+    /* ----------------------- Bouton Top ----------------------- */
+    #topBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background: linear-gradient(to right, #0066cc, #004080);
+      color: white;
+      cursor: pointer;
+      padding: 12px;
+      border-radius: 12px;
+      transition: all 0.3s;
+    }
+
+    #topBtn:hover {
+      background: linear-gradient(to right, #004080, #00264d);
+    }
+/* Effet survol pour les encadrés audio et galerie */
+.audio-box:hover, .gallery-box:hover {
+  transform: scale(1.15) rotate(-1deg); /* Agrandissement et légère rotation */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35); /* Ombre plus prononcée */
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+/* Changement subtil de couleur de fond au survol */
+.audio-box:hover {
+  background: linear-gradient(to bottom, #2b81c6, #0f3d73);
+}
+
+.gallery-box:hover {
+  background: linear-gradient(to bottom, #ffd699, #ffb84d);
+}
+
+    /* ----------------------- Responsive ----------------------- */
+    @media (max-width: 600px) {
+      .box {
+        width: 100%;
+        height: auto;
+        padding: 30px;
+      }
+      .box a {
+        font-size: 32px;
+      }
+      .explanation {
+        font-size: 18px;
+      }
+      .left-col {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-<div class="section">
+<div class="welcome-banner">🎙️ Welcome to the world of the self-taught sound technician / Bienvenue dans l’univers du technicien du son autodidacte Alain Ayenan</div>
 
-  <!-- 🔥 LIVE EN HAUT -->
-  <h2>Live Shows & Events / Concerts Live & Événements</h2>
-  <div class="content-flex">
-    <div class="left-col">
-      <ul>
-        <li>🎤 Festival Biennale de Ouidah – Bonbon Vodou, Erol Josué, Koudy Fagbemi...</li>
-        <li>🎤 Concert Hommage à Boncana Maiga – Aïcha Koné, Sekoumba Bambino...</li>
-        <li>🎤 Festival Wémèhwé – Sagbohan Danialou, Zenab Abib, Ricos Campos</li>
-        <li>🎤 Concert Cœur à Cœur – Sessime, Nikanort</li>
-      </ul>
-    </div>
-
-    <div class="box audio-box">
-      <a href="styles-live.html">🎤 Style Live</a>
-      <div class="explanation">Événements et concerts live enregistrés</div>
-    </div>
+<div class="header">
+  <img src="portrait1.jpg" alt="Alain Ayenan 1">
+  <div class="center-title">
+    <div class="title">Alain Ayenan</div>
+    <div class="subtitle">Ingénieur du Son – Studio & Live</div>
+    <div class="subtitle">Silence inspire me, sound expresses me and passion guides me.</div>
+      <a href="contact.html" class="btn-contact">📞 Joining / Contact</a>
   </div>
+  <img src="portrait2.jpg" alt="Alain Ayenan 2">
+</div>
 
-  <!-- 🔊 AUDIO -->
+<div class="section">
+  <h2>Introduction / Présentation</h2>
+  <p>Trained in sound recording and mixing by Mr. Euloge ASSOURAMOU, Alain Ayenan is a sound professional with over 15 years of experience in mixing, mastering, live sound reinforcement, multi-track concert recording, and audio processing. / 
+    Formé à la prise de son et au mixage par Monsieur Euloge ASSOURAMOU, Alain Ayenan est un professionnel du son doté de plus de 15 ans d'expérience dans le mixage, le mastering, la sonorisation live, l’enregistrement multi-pistes de concerts et le traitement audio.</p>
+
+  <h2>Skills / Compétences</h2>
+  <ul>
+    <li>🎚️ Mixage & Mastering (Studio & Live)</li>
+    <li>🎧 Traitement Audio & Nettoyage Sonore</li>
+    <li>💻 Logiciels : Cubase, Pro Tools, Reaper, Audacity</li>
+    <li>🎛️ Consoles : Midas, Yamaha, Behringer, Allen & Heath</li>
+    <li>🔊 Installation de systèmes audio professionnels</li>
+  </ul>
+
   <h2>Studio Works / Réalisations Studio</h2>
   <div class="content-flex">
     <div class="left-col">
@@ -186,22 +324,99 @@ footer {
         <li>La Promesse de Dieu – Vinphint</li>
         <li>Okpê – Ayodélé</li>
         <li>Hongan – Don Metok</li>
+        <li>No Time – Akel</li>
+        <li>Enfant – Roselyne OLORY</li>
+        <li>Nam'ablo – Almok</li>
+        <li>Ahelou – Roselyne OLORY</li>
+        <li>Victory – Frère Théodule DOSSOU</li>
+        <li>Vanité – Masto Djee</li>
+        <li>Seul – Zouley SANGARE</li>
       </ul>
     </div>
     <div class="box audio-box">
       <a href="styles_audio.html">🎼 Listen Audio Styles</a>
+      <div class="explanation">Écoute les styles du son musical travaillé par Alain</div>
     </div>
   </div>
 
+  <h2>Live Shows & Events / Concerts Live & Événements</h2>
+  <ul>
+    <li>🎤 Festival Biennale de Ouidah – Bonbon Vodou, Erol Josué, Koudy Fagbemi...</li>
+    <li>🎤 Concert Hommage à Boncana Maiga – Aïcha Koné, Sekoumba Bambino...</li>
+    <li>🎤 Festival Wémèhwé – Sagbohan Danialou, Zenab Abib, Ricos Campos</li>
+    <li>🎤 Concert Cœur à Cœur – Sessime, Nikanort</li>
+  </ul>
+
+  <h2>Portfolio / Portfolio</h2>
+  <div class="content-flex">
+    <div class="left-col">
+      <ul>
+        <li><a href="https://youtu.be/1vK5WYijmLE?si=-81DFpX7ssDORqyk" target="_blank">Audio – Okpê (Ayodélé)</a></li>
+        <li><a href="https://youtu.be/xXAH_J2qljI?si=Hp_Lkub4iEw41ZSL" target="_blank">Clip – Hongan (Don Metok)</a></li>
+        <li><a href="https://youtu.be/3rwLe9ujURU?si=WDMNWanX8e1G0A9S" target="_blank">Clip – Enfant (Roselyne OLORY)</a></li>
+        <li><a href="https://youtu.be/7yYAzxOoye0?si=O21NDEivGousR2Yi" target="_blank">Clip – Nam'ablo (Almok)</a></li>
+        <li><a href="https://youtu.be/6u2yWhfdIa8?si=yCaviSXhsXyjIWgA" target="_blank">Clip – Ton Amour (Frère Theodule Dossou)</a></li>
+        <li><a href="https://youtu.be/niN0h-AcpnQ?si=rq5VLEWAq0IArFtD" target="_blank">Clip – Ahelou (Roselyne OLORY)</a></li>
+        <li><a href="https://www.facebook.com/share/v/1CVFSmcDor/" target="_blank">Reportage Amateur concert coeur à coeur</a></li>
+        <li><a href="https://www.facebook.com/share/v/18FQZL3Vec/" target="_blank">Reportage – ORTB (Hommage Boncana Maiga)</a></li>
+        <li><a href="https://www.facebook.com/share/p/19RffViWCt/" target="_blank">Publication facebook – Bonbon Vodou</a></li>
+        <li><a href="https://www.facebook.com/share/v/17ckxy5MSZ/" target="_blank">Prestation – Erol Josué</a></li>
+        <li><a href="https://www.facebook.com/share/v/15YnUrgfQ6/" target="_blank">Prestation – Koudy Fagbemi</a></li>
+      </ul>
+    </div>
+    <div class="box gallery-box">
+      <a href="galerie.html">📷 Photo Gallery</a>
+      <div class="explanation">Galerie photos de Alain</div>
+       </div>
+  </div>
 </div>
 
-<!-- FIX bouton -->
-<button id="btnHomePage">Home page</button>
+  <!-- Bouton Ledin à gauche, couleur bleu roi -->
+<button id="btnHome page" style="
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #005bb5; /* bleu roi concentré */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+">
+    Home page
+</button>
 
 <script>
-document.getElementById('btnHomePage').onclick = function() {
-  window.location.href = "index.html";
-}
+  document.getElementById('btnHome page').addEventListener('click', function() {
+    window.location.href = "index.html"; // ← remplace par le nom exact que tu vas me donner
+  });
+</script>
+<button onclick="topFunction()" id="topBtn" title="Retour en haut">⬆️</button>
+
+<div class="contact">
+  📧 Email : alinayena@gmail.com<br />
+  📞 Téléphone : (00229) 0195082041 / 0165648655
+</div>
+<p>📌 Retrouvez tous mes liens ici : <a href="https://linktr.ee/alainayenan" target="_blank" rel="noopener noreferrer">linktr.ee/alainayenan</a></p>
+
+<footer>
+  © 2025 Alain Ayenan – Tous droits réservés
+</footer>
+
+<script>
+  let topBtn = document.getElementById("topBtn");
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  };
+  function topFunction() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 </script>
 
 </body>
