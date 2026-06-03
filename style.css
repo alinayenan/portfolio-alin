@@ -16,12 +16,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    @media (min-width: 1024px) {
-  .landing-hero {
-    background-size: contain; /* toute l'image visible */
-    background-position: top center; /* la tête reste visible */
-  }
-}
+    
 
 /* Conteneur de contenu */
 .container {
@@ -105,7 +100,6 @@ body {
 
 /* Bouton menu en haut à droite (style moderne cercle orange) */
 .menu-btn {
- .menu-btn {
   position: fixed;
   top: 20px;
   right: 20px;
@@ -114,11 +108,51 @@ body {
 
   display: flex;
   align-items: center;
-  gap: 1px; /* presque collé */
+  gap: 2px; /* presque collé */
 
   user-select: none;
 }
 
+/* TEXTE MENU (sans toucher HTML) */
+.menu-btn::before {
+  content: "MENU";
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* CERCLE ORANGE (ton bouton original) */
+.menu-btn::after {
+  content: "☰";
+  background: #ff6600;
+  color: white;
+
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.menu-btn:hover::after {
+  background: #cc5200;
+  transform: scale(1.08);
+}
+
+/* mobile */
+@media (max-width: 480px) {
+  .menu-btn::before {
+    font-size: 12px;
+  }
+}
 .menu-label {
   color: white;
   font-size: 16px;
@@ -213,7 +247,7 @@ body {
   width: 100%;           /* prend toute la largeur */
   text-align: center;    /* centré horizontalement */
   background: linear-gradient(90deg, #0d6efd, #6f42c1);
-); /* fond semi-transparent, optionnel */
+ /* fond semi-transparent, optionnel */
   color: white;          /* couleur du texte */
   font-size: 14px;       /* taille du texte */
   padding: 10px 0;       /* un peu d'espace en haut et en bas */
@@ -227,7 +261,7 @@ body {
   width: 100%;           /* prend toute la largeur */
   text-align: center;    /* centré horizontalement */
   background: linear-gradient(90deg, #0d6efd, #6f42c1);
-); /* fond semi-transparent, optionnel */
+ /* fond semi-transparent, optionnel */
   color: white;          /* couleur du texte */
   font-size: 14px;       /* taille du texte */
   padding: 10px 0;       /* un peu d'espace en haut et en bas */
