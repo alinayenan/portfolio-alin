@@ -105,31 +105,52 @@ body {
 
 /* Bouton menu en haut à droite (style moderne cercle orange) */
 .menu-btn {
+ .menu-btn {
   position: fixed;
   top: 20px;
   right: 20px;
-  font-size: 28px;   /* taille de l’icône ☰ */
-  cursor: pointer;
   z-index: 1001;
+  cursor: pointer;
 
-  background: #ff6600; /* couleur du cercle */
-  color: white;        /* couleur de l’icône ☰ */
-  width: 60px;         /* ← augmente la taille ici */
-  height: 60px;        /* ← et ici */
-  border-radius: 50%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  transition: 0.3s;
+  gap: 1px; /* presque collé */
+
   user-select: none;
 }
 
-.menu-btn:hover {
+.menu-label {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  letter-spacing: 1px;
+}
+
+.menu-icon {
+  background: #ff6600;
+  color: white;
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.menu-btn:hover .menu-icon {
   background: #cc5200;
   transform: scale(1.08);
 }
-
 /* Panneau latéral */
 .side-menu {
   padding: 150px 20px 20px 20px;
