@@ -113,7 +113,7 @@ body {
   user-select: none;
 }
 .menu-btn::after {
-  content: "☰";
+  content:
   background: #ff6600;
   color: white;
 
