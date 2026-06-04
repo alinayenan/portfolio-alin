@@ -146,7 +146,7 @@ body {
 /* mobile */
 @media (max-width: 480px) {
   .menu-btn::before {
-    font-size: 18px;
+    font-size: 22px;
   }
 }
 .menu-label {
